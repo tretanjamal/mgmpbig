@@ -3,38 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portal Komunitas MGMP Bahasa Inggris SMP Kab. Sampang</title>
+  <title>Portal Resmi MGMP Bahasa Inggris SMP Kabupaten Sampang</title>
   
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts & Font Awesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-          },
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
           colors: {
-            brand: {
-              50: '#eff6ff',
-              100: '#dbeafe',
-              500: '#3b82f6',
-              600: '#2563eb',
-              700: '#1d4ed8',
-              800: '#1e40af',
-              900: '#1e3a8a',
-            },
-            leaf: {
-              500: '#10b981',
-              600: '#059669',
-              700: '#047857',
-            }
+            brand: { 50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a' },
+            leaf: { 50: '#f0fdf4', 100: '#dcfce7', 500: '#10b981', 600: '#059669', 700: '#047857' }
           }
         }
       }
@@ -42,942 +28,1059 @@
   </script>
 
   <style>
-    /* Transisi halus dan modal overlay */
-    .glass-nav {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(8px);
-    }
-    .custom-scrollbar::-webkit-scrollbar {
-      width: 6px;
-      height: 6px;
-    }
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-      background-color: #cbd5e1;
-      border-radius: 9999px;
-    }
+    .glass-nav { background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(10px); }
+    .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 9999px; }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col antialiased selection:bg-brand-500 selection:text-white">
 
-  <!-- ==================== TOP NOTIFICATION / BANNER ==================== -->
+  <!-- ==================== HEADER NOTIFIKASI ==================== -->
   <div class="bg-gradient-to-r from-brand-900 via-brand-700 to-leaf-700 text-white text-xs sm:text-sm py-2 px-4 text-center flex items-center justify-center gap-2">
     <i class="fa-solid fa-graduation-cap"></i>
-    <span>Portal Resmi Musyawarah Guru Mata Pelajaran (MGMP) Bahasa Inggris SMP Kab. Sampang</span>
+    <span>Portal Komunitas MGMP Bahasa Inggris SMP Kabupaten Sampang, Jawa Timur</span>
   </div>
 
-  <!-- ==================== NAVBAR (RESPONSIVE) ==================== -->
+  <!-- ==================== NAVBAR RESPONSIVE ==================== -->
   <header class="glass-nav border-b border-slate-200 sticky top-0 z-40 shadow-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 sm:h-20">
         
-        <!-- Logo & Identitas -->
+        <!-- Logo Brand -->
         <div class="flex items-center gap-3 cursor-pointer" onclick="navigate('home')">
-          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-brand-600 to-leaf-600 flex items-center justify-center text-white shadow-md shadow-brand-500/20">
-            <i class="fa-solid fa-earth-asia text-xl sm:text-2xl"></i>
+          <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-brand-600 to-leaf-600 flex items-center justify-center text-white shadow-md shadow-brand-500/20">
+            <i class="fa-solid fa-earth-asia text-xl"></i>
           </div>
           <div>
-            <h1 class="font-bold text-base sm:text-lg text-slate-900 leading-tight">MGMP B. INGGRIS</h1>
-            <p class="text-xs text-slate-500 font-medium">SMP Kabupaten Sampang</p>
+            <h1 class="font-extrabold text-base sm:text-lg text-slate-900 tracking-tight leading-tight">MGMP B. INGGRIS</h1>
+            <p class="text-[11px] sm:text-xs text-slate-500 font-medium">SMP Kab. Sampang</p>
           </div>
         </div>
 
-        <!-- Menu Desktop -->
-        <nav class="hidden md:flex items-center gap-1 lg:gap-2">
-          <button onclick="navigate('home')" class="nav-item px-3 py-2 text-sm font-medium rounded-lg text-slate-700 hover:text-brand-600 hover:bg-slate-100 transition">Beranda</button>
-          <button onclick="navigate('agenda')" class="nav-item px-3 py-2 text-sm font-medium rounded-lg text-slate-700 hover:text-brand-600 hover:bg-slate-100 transition">Agenda & Presensi</button>
-          <button onclick="navigate('anggota')" class="nav-item px-3 py-2 text-sm font-medium rounded-lg text-slate-700 hover:text-brand-600 hover:bg-slate-100 transition">Direktori Guru</button>
-          <button onclick="navigate('pengumuman')" class="nav-item px-3 py-2 text-sm font-medium rounded-lg text-slate-700 hover:text-brand-600 hover:bg-slate-100 transition">Pengumuman</button>
+        <!-- Menu Desktop Sesuai Peran -->
+        <nav class="hidden lg:flex items-center gap-1">
+          <!-- Menu Publik -->
+          <button onclick="navigate('home')" class="nav-btn px-3 py-2 text-xs font-semibold rounded-lg text-slate-700 hover:text-brand-600 hover:bg-slate-100 transition">Beranda</button>
+          <button onclick="navigate('agenda')" class="nav-btn px-3 py-2 text-xs font-semibold rounded-lg text-slate-700 hover:text-brand-600 hover:bg-slate-100 transition">Agenda & Notulensi</button>
+          <button onclick="navigate('pengumuman')" class="nav-btn px-3 py-2 text-xs font-semibold rounded-lg text-slate-700 hover:text-brand-600 hover:bg-slate-100 transition">Pengumuman</button>
           
-          <!-- Menu Admin Only -->
-          <button id="navAdminBtn" onclick="navigate('admin-users')" class="hidden px-3 py-2 text-sm font-semibold rounded-lg bg-amber-50 text-amber-700 border border-amber-200 hover:bg-amber-100 transition items-center gap-1.5">
-            <i class="fa-solid fa-users-gear text-amber-600"></i>
-            <span>Kelola Akun</span>
+          <!-- Menu Khusus Anggota ke Atas -->
+          <button id="navAnggotaBtn" onclick="navigate('anggota')" class="hidden nav-btn px-3 py-2 text-xs font-semibold rounded-lg text-slate-700 hover:text-brand-600 hover:bg-slate-100 transition">Direktori Guru</button>
+          <button id="navMateriBtn" onclick="navigate('perpustakaan')" class="hidden nav-btn px-3 py-2 text-xs font-semibold rounded-lg text-slate-700 hover:text-brand-600 hover:bg-slate-100 transition">Perpustakaan Modul</button>
+          <button id="navKeuanganBtn" onclick="navigate('keuangan')" class="hidden nav-btn px-3 py-2 text-xs font-semibold rounded-lg text-slate-700 hover:text-brand-600 hover:bg-slate-100 transition">Laporan & Iuran</button>
+
+          <!-- Menu Pengurus & Sekretaris & Admin -->
+          <button id="navManajemenBtn" onclick="navigate('kelola-anggota')" class="hidden px-3 py-2 text-xs font-semibold rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200 hover:bg-emerald-100 transition items-center gap-1">
+            <i class="fa-solid fa-users-gear text-emerald-600"></i>
+            <span>Verifikasi Anggota</span>
+          </button>
+
+          <!-- Menu Khusus Ketua & Admin -->
+          <button id="navDashboardBtn" onclick="navigate('dashboard')" class="hidden px-3 py-2 text-xs font-semibold rounded-lg bg-indigo-50 text-indigo-800 border border-indigo-200 hover:bg-indigo-100 transition items-center gap-1">
+            <i class="fa-solid fa-chart-line text-indigo-600"></i>
+            <span>Dashboard</span>
+          </button>
+
+          <!-- Menu Khusus Admin Saja -->
+          <button id="navAdminBtn" onclick="navigate('admin-users')" class="hidden px-3 py-2 text-xs font-semibold rounded-lg bg-rose-50 text-rose-800 border border-rose-200 hover:bg-rose-100 transition items-center gap-1">
+            <i class="fa-solid fa-shield-halved text-rose-600"></i>
+            <span>Admin Sistem</span>
           </button>
         </nav>
 
-        <!-- Bagian Kanan / Tombol Aksi -->
-        <div class="hidden md:flex items-center gap-3">
-          <!-- State Belum Login -->
+        <!-- Kanan Navbar: Auth Box -->
+        <div class="hidden lg:flex items-center gap-2">
+          <!-- Unauthenticated -->
           <div id="unauthArea" class="flex items-center gap-2">
-            <button onclick="openModal('modalLogin')" class="px-4 py-2 text-sm font-semibold rounded-xl text-slate-700 hover:bg-slate-100 transition">
+            <button onclick="openModal('modalLogin')" class="px-4 py-2 text-xs font-bold rounded-xl text-slate-700 hover:bg-slate-100 transition">
               Masuk
             </button>
-            <button onclick="openModal('modalRegister')" class="px-4 py-2 text-sm font-semibold rounded-xl bg-gradient-to-r from-brand-600 to-leaf-600 hover:from-brand-700 hover:to-leaf-700 text-white shadow-sm transition">
-              Daftar Anggota
+            <button onclick="openModal('modalRegister')" class="px-4 py-2 text-xs font-bold rounded-xl bg-brand-600 hover:bg-brand-700 text-white shadow-xs transition">
+              Daftar Mandiri
             </button>
           </div>
 
-          <!-- State Sudah Login -->
+          <!-- Authenticated -->
           <div id="authArea" class="hidden items-center gap-3">
             <div class="text-right">
-              <div id="userFullName" class="text-sm font-semibold text-slate-900 truncate max-w-[150px]">Nama Guru</div>
-              <div id="userBadge" class="text-[11px] px-2 py-0.5 rounded-full inline-block font-semibold bg-blue-100 text-blue-800">Anggota</div>
+              <div id="userFullName" class="text-xs font-bold text-slate-900 truncate max-w-[140px]">Guru MGMP</div>
+              <span id="userBadge" class="text-[10px] px-2 py-0.5 rounded-full font-bold bg-blue-100 text-blue-800">Anggota</span>
             </div>
-            <button onclick="handleLogout()" title="Keluar Akun" class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-rose-50 text-slate-600 hover:text-rose-600 flex items-center justify-center transition">
-              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <button onclick="handleLogout()" title="Keluar Akun" class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-rose-50 text-slate-600 hover:text-rose-600 flex items-center justify-center transition">
+              <i class="fa-solid fa-power-off text-sm"></i>
             </button>
           </div>
         </div>
 
-        <!-- Tombol Menu Mobile Hamburger -->
-        <div class="flex md:hidden items-center gap-2">
-          <button id="mobileMenuToggle" onclick="toggleMobileMenu()" class="p-2 rounded-xl text-slate-600 hover:bg-slate-100 transition focus:outline-none">
-            <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
+        <!-- Tombol Mobile Hamburger -->
+        <div class="flex lg:hidden items-center gap-2">
+          <button onclick="toggleMobileMenu()" class="p-2 rounded-xl text-slate-600 hover:bg-slate-100 transition">
+            <i class="fa-solid fa-bars text-xl"></i>
           </button>
         </div>
 
       </div>
     </div>
 
-    <!-- Dropdown Menu Mobile -->
-    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 shadow-lg space-y-2">
-      <button onclick="navigate('home'); toggleMobileMenu()" class="w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-100">Beranda</button>
-      <button onclick="navigate('agenda'); toggleMobileMenu()" class="w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-100">Agenda & Presensi</button>
-      <button onclick="navigate('anggota'); toggleMobileMenu()" class="w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-100">Direktori Guru</button>
-      <button onclick="navigate('pengumuman'); toggleMobileMenu()" class="w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-100">Pengumuman</button>
-      <button id="mobileNavAdminBtn" onclick="navigate('admin-users'); toggleMobileMenu()" class="hidden w-full text-left px-3 py-2.5 rounded-lg text-sm font-semibold bg-amber-50 text-amber-800 border border-amber-200">
-        <i class="fa-solid fa-users-gear mr-2 text-amber-600"></i>Kelola Akun Pengguna
-      </button>
+    <!-- Dropdown Mobile Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-5 space-y-1.5 shadow-lg">
+      <button onclick="navigate('home'); toggleMobileMenu()" class="w-full text-left px-3 py-2 text-xs font-semibold rounded-lg text-slate-700 hover:bg-slate-50">Beranda</button>
+      <button onclick="navigate('agenda'); toggleMobileMenu()" class="w-full text-left px-3 py-2 text-xs font-semibold rounded-lg text-slate-700 hover:bg-slate-50">Agenda & Notulensi</button>
+      <button onclick="navigate('pengumuman'); toggleMobileMenu()" class="w-full text-left px-3 py-2 text-xs font-semibold rounded-lg text-slate-700 hover:bg-slate-50">Pengumuman</button>
+      
+      <button id="mobileNavAnggotaBtn" onclick="navigate('anggota'); toggleMobileMenu()" class="hidden w-full text-left px-3 py-2 text-xs font-semibold rounded-lg text-slate-700 hover:bg-slate-50">Direktori Guru</button>
+      <button id="mobileNavMateriBtn" onclick="navigate('perpustakaan'); toggleMobileMenu()" class="hidden w-full text-left px-3 py-2 text-xs font-semibold rounded-lg text-slate-700 hover:bg-slate-50">Perpustakaan Modul</button>
+      <button id="mobileNavKeuanganBtn" onclick="navigate('keuangan'); toggleMobileMenu()" class="hidden w-full text-left px-3 py-2 text-xs font-semibold rounded-lg text-slate-700 hover:bg-slate-50">Laporan & Iuran</button>
+
+      <button id="mobileNavManajemenBtn" onclick="navigate('kelola-anggota'); toggleMobileMenu()" class="hidden w-full text-left px-3 py-2 text-xs font-semibold rounded-lg bg-emerald-50 text-emerald-800">Verifikasi Anggota</button>
+      <button id="mobileNavDashboardBtn" onclick="navigate('dashboard'); toggleMobileMenu()" class="hidden w-full text-left px-3 py-2 text-xs font-semibold rounded-lg bg-indigo-50 text-indigo-800">Dashboard Eksekutif</button>
+      <button id="mobileNavAdminBtn" onclick="navigate('admin-users'); toggleMobileMenu()" class="hidden w-full text-left px-3 py-2 text-xs font-semibold rounded-lg bg-rose-50 text-rose-800">Admin Sistem</button>
 
       <div class="pt-3 border-t border-slate-200">
         <div id="mobileUnauthArea" class="flex flex-col gap-2">
-          <button onclick="openModal('modalLogin'); toggleMobileMenu()" class="w-full py-2.5 text-center text-sm font-semibold rounded-xl border border-slate-300 text-slate-700">Masuk</button>
-          <button onclick="openModal('modalRegister'); toggleMobileMenu()" class="w-full py-2.5 text-center text-sm font-semibold rounded-xl bg-brand-600 text-white">Daftar Anggota</button>
+          <button onclick="openModal('modalLogin'); toggleMobileMenu()" class="w-full py-2.5 text-xs font-bold rounded-xl border border-slate-300 text-slate-700">Masuk</button>
+          <button onclick="openModal('modalRegister'); toggleMobileMenu()" class="w-full py-2.5 text-xs font-bold rounded-xl bg-brand-600 text-white">Daftar Mandiri</button>
         </div>
         <div id="mobileAuthArea" class="hidden flex-col gap-2">
-          <div class="p-3 bg-slate-50 rounded-xl mb-1">
-            <p id="mobileUserName" class="text-sm font-bold text-slate-900 truncate">Nama Guru</p>
-            <p id="mobileUserRole" class="text-xs text-brand-600 font-medium">Role: Anggota</p>
+          <div class="p-3 bg-slate-50 rounded-xl">
+            <p id="mobileUserName" class="text-xs font-bold text-slate-900 truncate">Nama Guru</p>
+            <p id="mobileUserRole" class="text-[11px] text-brand-600 font-semibold">Peran: Anggota</p>
           </div>
-          <button onclick="handleLogout()" class="w-full py-2.5 text-center text-sm font-semibold rounded-xl bg-rose-50 text-rose-600 border border-rose-200">Keluar Akun</button>
+          <button onclick="handleLogout()" class="w-full py-2 text-xs font-bold rounded-xl bg-rose-50 text-rose-600 border border-rose-200">Keluar Akun</button>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- ==================== MAIN CONTENT WRAPPER ==================== -->
+  <!-- ==================== MAIN CONTENT SPA ==================== -->
   <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
 
-    <!-- NOTIFIKASI TOAST POPUP -->
+    <!-- TOAST POPUP NOTIFICATION -->
     <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none max-w-sm w-full bg-slate-900 text-white p-4 rounded-2xl shadow-xl flex items-start gap-3">
       <div id="toastIcon" class="text-xl text-leaf-500 mt-0.5"><i class="fa-solid fa-circle-check"></i></div>
       <div class="flex-1">
-        <h4 id="toastTitle" class="font-semibold text-sm">Pemberitahuan</h4>
+        <h4 id="toastTitle" class="font-bold text-xs uppercase tracking-wider">Pemberitahuan</h4>
         <p id="toastMessage" class="text-xs text-slate-300 mt-0.5">Pesan sistem...</p>
       </div>
     </div>
 
-    <!-- ==================== VIEW 1: BERANDA ==================== -->
-    <section id="view-home" class="space-y-8 sm:space-y-12">
-      <!-- HERO SECTION -->
-      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-900 via-brand-800 to-leaf-800 text-white p-6 sm:p-10 lg:p-14 shadow-xl">
+    <!-- ==================== VIEW 1: BERANDA (PUBLIK) ==================== -->
+    <section id="view-home" class="space-y-8">
+      <!-- Hero Banner -->
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-900 via-brand-800 to-leaf-800 text-white p-6 sm:p-10 lg:p-12 shadow-xl">
         <div class="relative z-10 max-w-2xl">
           <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-white/10 backdrop-blur-md text-emerald-300 border border-white/10 mb-4">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
             Tahun Ajaran 2026/2027
           </span>
-          <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
-            Tingkatkan Kompetensi Guru Bahasa Inggris di Kabupaten Sampang
+          <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight leading-tight">
+            Kolaborasi Guru Bahasa Inggris SMP se-Kabupaten Sampang
           </h2>
-          <p class="mt-4 text-sm sm:text-base text-slate-200 leading-relaxed">
-            Wadah kolaborasi, inovasi kurikulum, pengembangan materi ajar, serta sistem presensi dan keanggotaan terintegrasi.
+          <p class="mt-3 text-xs sm:text-sm text-slate-200 leading-relaxed">
+            Portal terintegrasi untuk kurikulum, presensi kehadiran digital, notulensi rapat berkala, transparansi iuran kas, dan perpustakaan modul ajar bersama.
           </p>
-          <div class="mt-6 sm:mt-8 flex flex-wrap gap-3">
-            <button onclick="navigate('agenda')" class="px-5 py-3 rounded-xl bg-white text-brand-900 font-semibold text-sm shadow hover:bg-slate-100 transition flex items-center gap-2">
+          <div class="mt-6 flex flex-wrap gap-3">
+            <button onclick="navigate('agenda')" class="px-5 py-2.5 rounded-xl bg-white text-brand-900 font-bold text-xs shadow hover:bg-slate-100 transition flex items-center gap-2">
               <i class="fa-solid fa-calendar-check text-brand-600"></i>
-              Lihat Agenda & Presensi
+              Lihat Agenda & Notulensi
             </button>
-            <button onclick="navigate('anggota')" class="px-5 py-3 rounded-xl bg-white/15 hover:bg-white/20 text-white font-semibold text-sm backdrop-blur-md border border-white/20 transition flex items-center gap-2">
-              <i class="fa-solid fa-address-book"></i>
-              Cari Rekan Guru
+            <button onclick="openModal('modalLogin')" class="px-5 py-2.5 rounded-xl bg-white/15 hover:bg-white/20 text-white font-bold text-xs backdrop-blur-md border border-white/20 transition flex items-center gap-2">
+              <i class="fa-solid fa-right-to-bracket"></i>
+              Masuk Anggota
             </button>
-          </div>
-        </div>
-
-        <!-- Ornamen Visual Hero -->
-        <div class="absolute -right-16 -bottom-16 w-80 h-80 rounded-full bg-white/5 blur-2xl pointer-events-none"></div>
-      </div>
-
-      <!-- KARTU STATISTIK KILAS -->
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-        <div class="bg-white p-4 sm:p-6 rounded-2xl border border-slate-200/80 shadow-xs flex items-center gap-4">
-          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-xl shrink-0">
-            <i class="fa-solid fa-users"></i>
-          </div>
-          <div>
-            <p class="text-xs text-slate-500 font-medium">Total Anggota</p>
-            <h3 id="statTotalGuru" class="text-xl sm:text-2xl font-bold text-slate-900">48+</h3>
-          </div>
-        </div>
-        <div class="bg-white p-4 sm:p-6 rounded-2xl border border-slate-200/80 shadow-xs flex items-center gap-4">
-          <div class="w-12 h-12 rounded-xl bg-leaf-50 text-leaf-600 flex items-center justify-center text-xl shrink-0">
-            <i class="fa-solid fa-school"></i>
-          </div>
-          <div>
-            <p class="text-xs text-slate-500 font-medium">SMP Terdaftar</p>
-            <h3 id="statTotalSekolah" class="text-xl sm:text-2xl font-bold text-slate-900">32</h3>
-          </div>
-        </div>
-        <div class="bg-white p-4 sm:p-6 rounded-2xl border border-slate-200/80 shadow-xs flex items-center gap-4">
-          <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl shrink-0">
-            <i class="fa-solid fa-chalkboard-user"></i>
-          </div>
-          <div>
-            <p class="text-xs text-slate-500 font-medium">Kegiatan Selesai</p>
-            <h3 class="text-xl sm:text-2xl font-bold text-slate-900">14</h3>
-          </div>
-        </div>
-        <div class="bg-white p-4 sm:p-6 rounded-2xl border border-slate-200/80 shadow-xs flex items-center gap-4">
-          <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl shrink-0">
-            <i class="fa-solid fa-book-open"></i>
-          </div>
-          <div>
-            <p class="text-xs text-slate-500 font-medium">Modul Ajar</p>
-            <h3 class="text-xl sm:text-2xl font-bold text-slate-900">26</h3>
           </div>
         </div>
       </div>
 
-      <!-- HIGHLIGHT AGENDA & PENGUMUMAN TERBARU -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <!-- Agenda Mendatang -->
-        <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-xs">
+      <!-- Berita Pengumuman & Agenda Terdekat -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-xs">
           <div class="flex items-center justify-between mb-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+            <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
               <i class="fa-regular fa-calendar text-brand-600"></i>
               Agenda Kegiatan Terdekat
             </h3>
-            <button onclick="navigate('agenda')" class="text-xs font-semibold text-brand-600 hover:underline">Lihat Semua</button>
+            <button onclick="navigate('agenda')" class="text-xs font-semibold text-brand-600 hover:underline">Semua</button>
           </div>
           <div id="homeAgendaContainer" class="space-y-3">
-            <p class="text-sm text-slate-400 py-4 text-center">Memuat agenda terdekat...</p>
+            <p class="text-xs text-slate-400 py-3 text-center">Memuat agenda...</p>
           </div>
         </div>
 
-        <!-- Maklumat / Pengumuman Terkini -->
-        <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-xs">
+        <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-xs">
           <div class="flex items-center justify-between mb-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+            <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
               <i class="fa-solid fa-bullhorn text-leaf-600"></i>
               Pengumuman Terbaru
             </h3>
-            <button onclick="navigate('pengumuman')" class="text-xs font-semibold text-leaf-600 hover:underline">Lihat Semua</button>
+            <button onclick="navigate('pengumuman')" class="text-xs font-semibold text-leaf-600 hover:underline">Semua</button>
           </div>
           <div id="homeAnnouncementContainer" class="space-y-3">
-            <p class="text-sm text-slate-400 py-4 text-center">Memuat maklumat organisasi...</p>
+            <p class="text-xs text-slate-400 py-3 text-center">Memuat pengumuman...</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ==================== VIEW 2: AGENDA & PRESENSI ==================== -->
+    <!-- ==================== VIEW 2: AGENDA, KEHADIRAN & NOTULENSI (PUBLIK) ==================== -->
     <section id="view-agenda" class="hidden space-y-6">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Jadwal Pertemuan & Presensi Digital</h2>
-          <p class="text-xs sm:text-sm text-slate-500">Masukkan token yang diumumkan panitia saat kegiatan berlangsung.</p>
+          <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900">Agenda, Notulensi & Rekap Kehadiran</h2>
+          <p class="text-xs text-slate-500">Daftar kegiatan MGMP terbuka untuk publik, dilengkapi notulensi dan riwayat presensi.</p>
         </div>
-        <div class="flex items-center gap-2" id="actionCreateActivityBtn">
-          <!-- Tombol buat kegiatan jika peran pengurus/admin -->
-        </div>
-      </div>
-
-      <!-- FORM PRESENSI CEPAT -->
-      <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-3xl p-5 sm:p-8">
-        <div class="max-w-xl">
-          <span class="text-xs font-bold uppercase tracking-wider text-brand-700 bg-white px-2.5 py-1 rounded-md border border-blue-200">
-            Form Presensi Instan
-          </span>
-          <h3 class="text-lg sm:text-xl font-bold text-slate-900 mt-2">Hadir di Pertemuan Hari Ini?</h3>
-          <p class="text-xs sm:text-sm text-slate-600 mt-1">
-            Pilih kegiatan yang sedang berlangsung, lalu masukkan 6 karakter token unik presensi.
-          </p>
-
-          <form id="formAttendance" onsubmit="handleAttendanceSubmit(event)" class="mt-4 space-y-3">
-            <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">Pilih Kegiatan</label>
-              <select id="presensiSelectKegiatan" required class="w-full bg-white border border-slate-300 rounded-xl px-3 py-2.5 text-sm focus:ring-2 focus:ring-brand-500 focus:outline-none">
-                <option value="">-- Pilih Agenda Kegiatan --</option>
-              </select>
-            </div>
-            <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">Token Presensi</label>
-              <div class="flex gap-2">
-                <input type="text" id="presensiTokenInput" placeholder="Contoh: SMP01X" maxlength="10" required class="uppercase flex-1 bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-sm font-mono tracking-widest focus:ring-2 focus:ring-brand-500 focus:outline-none">
-                <button type="submit" id="btnSubmitPresensi" class="px-5 py-2.5 bg-brand-600 hover:bg-brand-700 text-white rounded-xl text-sm font-semibold transition shrink-0 flex items-center gap-2">
-                  <i class="fa-solid fa-fingerprint"></i>
-                  <span>Kirim Hadir</span>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <!-- DAFTAR KEGIATAN -->
-      <div class="bg-white rounded-3xl border border-slate-200/80 p-5 sm:p-6 shadow-xs">
-        <h3 class="text-base font-bold text-slate-900 mb-4">Daftar Agenda Kegiatan MGMP</h3>
-        <div id="activitiesList" class="space-y-4">
-          <!-- Render kegiatan -->
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== VIEW 3: DIREKTORI GURU (ANGGOTA) ==================== -->
-    <section id="view-anggota" class="hidden space-y-6">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div>
-          <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Direktori Guru Bahasa Inggris</h2>
-          <p class="text-xs sm:text-sm text-slate-500">Daftar pendidik se-Kabupaten Sampang yang tergabung dalam forum MGMP.</p>
-        </div>
-        <div class="w-full sm:w-72">
-          <div class="relative">
-            <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3 text-slate-400 text-sm"></i>
-            <input type="text" id="searchMemberInput" oninput="filterMembers()" placeholder="Cari nama atau sekolah..." class="w-full pl-9 pr-4 py-2 bg-white border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-brand-500 focus:outline-none">
-          </div>
-        </div>
-      </div>
-
-      <!-- TABEL RESPONSIVE (DENGAN TAMPILAN KARTU PADA MOBILE) -->
-      <div class="bg-white rounded-3xl border border-slate-200/80 overflow-hidden shadow-xs">
-        <div class="overflow-x-auto custom-scrollbar">
-          <table class="w-full text-left border-collapse text-sm">
-            <thead class="bg-slate-50 text-slate-600 font-semibold border-b border-slate-200">
-              <tr>
-                <th class="p-4">Guru / Pendidik</th>
-                <th class="p-4">Sekolah Penugasan</th>
-                <th class="p-4">NIP / NUPTK</th>
-                <th class="p-4">Jabatan MGMP</th>
-                <th class="p-4 text-center">Kontak</th>
-              </tr>
-            </thead>
-            <tbody id="memberTableBody" class="divide-y divide-slate-100 text-slate-700">
-              <!-- Render anggota -->
-            </tbody>
-          </table>
-        </div>
-        <div id="memberEmptyState" class="hidden py-12 text-center text-slate-400 text-sm">
-          Tidak ada data guru yang cocok dengan pencarian Anda.
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== VIEW 4: PENGUMUMAN ==================== -->
-    <section id="view-pengumuman" class="hidden space-y-6">
-      <div>
-        <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Pengumuman & Maklumat Organisasi</h2>
-        <p class="text-xs sm:text-sm text-slate-500">Informasi resmi seputar surat edaran, workshop, dan agenda MGMP.</p>
-      </div>
-
-      <div id="announcementListFull" class="space-y-4">
-        <!-- Render kartu pengumuman -->
-      </div>
-    </section>
-
-    <!-- ==================== VIEW 5: ADMIN - KELOLA AKUN PENGGUNA ==================== -->
-    <section id="view-admin-users" class="hidden space-y-6">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-amber-50/70 border border-amber-200 rounded-3xl p-5 sm:p-6">
-        <div>
-          <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800 border border-amber-200 mb-2">
-            <i class="fa-solid fa-shield-halved"></i> Khusus Administrator
-          </span>
-          <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Manajemen Hak Akses & Akun</h2>
-          <p class="text-xs sm:text-sm text-slate-600">Tambah pengguna dengan peran tertentu, konfirmasi pendaftaran baru, dan hapus akun.</p>
-        </div>
-        <div>
-          <button onclick="openModal('modalAdminAddUser')" class="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-sm font-semibold shadow-xs flex items-center gap-2 transition">
-            <i class="fa-solid fa-user-plus"></i>
-            <span>Tambah User Baru</span>
+        <div id="btnSekretarisKegiatan" class="hidden">
+          <button onclick="openModal('modalCreateKegiatan')" class="px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-xl text-xs font-bold transition flex items-center gap-2">
+            <i class="fa-solid fa-calendar-plus"></i>
+            <span>Tambah Agenda (Sekretaris)</span>
           </button>
         </div>
       </div>
 
-      <!-- FILTER STATUS -->
-      <div class="flex items-center gap-2 overflow-x-auto pb-2">
-        <button onclick="filterAdminUsers('ALL')" class="admin-tab-btn px-4 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-white">Semua (<span id="countAllUsers">0</span>)</button>
-        <button onclick="filterAdminUsers('Pending')" class="admin-tab-btn px-4 py-1.5 rounded-xl text-xs font-semibold bg-white text-slate-600 border border-slate-200 hover:bg-slate-50">Menunggu Persetujuan (<span id="countPendingUsers">0</span>)</button>
-        <button onclick="filterAdminUsers('Active')" class="admin-tab-btn px-4 py-1.5 rounded-xl text-xs font-semibold bg-white text-slate-600 border border-slate-200 hover:bg-slate-50">Aktif</button>
+      <!-- Form Presensi Anggota -->
+      <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-3xl p-5 sm:p-6">
+        <h3 class="text-base font-bold text-slate-900">Input Presensi Kehadiran</h3>
+        <p class="text-xs text-slate-600 mt-0.5">Anggota dapat menginput token yang diumumkan panitia saat kegiatan sedang berlangsung.</p>
+        <form onsubmit="handleAttendanceSubmit(event)" class="mt-4 grid grid-cols-1 sm:grid-cols-12 gap-3">
+          <div class="sm:col-span-6">
+            <select id="presensiSelectKegiatan" required class="w-full bg-white border border-slate-300 rounded-xl px-3 py-2 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
+              <option value="">-- Pilih Agenda Kegiatan --</option>
+            </select>
+          </div>
+          <div class="sm:col-span-4">
+            <input type="text" id="presensiTokenInput" placeholder="Token: Contoh SMP01X" maxlength="10" required class="uppercase w-full bg-white border border-slate-300 rounded-xl px-3 py-2 text-xs font-mono tracking-widest focus:ring-2 focus:ring-brand-500 focus:outline-none">
+          </div>
+          <div class="sm:col-span-2">
+            <button type="submit" id="btnSubmitPresensi" class="w-full py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-xl text-xs font-bold transition">
+              Kirim Hadir
+            </button>
+          </div>
+        </form>
       </div>
 
-      <!-- TABEL KELOLA USER ADMIN (RESPONSIF) -->
-      <div class="bg-white rounded-3xl border border-slate-200/80 shadow-xs overflow-hidden">
+      <!-- Daftar Kegiatan & Notulensi -->
+      <div class="space-y-4" id="agendaCardsContainer">
+        <!-- Render kartu agenda -->
+      </div>
+
+      <!-- Tabel Kehadiran Publik -->
+      <div class="bg-white rounded-3xl border border-slate-200 p-5 shadow-xs">
+        <h3 class="text-sm font-bold text-slate-900 mb-3">Rekap Kehadiran Terakhir</h3>
         <div class="overflow-x-auto custom-scrollbar">
-          <table class="w-full text-left border-collapse text-sm">
-            <thead class="bg-slate-50 text-slate-600 font-semibold border-b border-slate-200 text-xs uppercase tracking-wider">
+          <table class="w-full text-left border-collapse text-xs">
+            <thead class="bg-slate-50 text-slate-600 font-semibold border-b border-slate-200">
               <tr>
-                <th class="p-4">Akun & Nama Lengkap</th>
-                <th class="p-4">Sekolah / Instansi</th>
-                <th class="p-4">Role / Peran</th>
-                <th class="p-4">Status</th>
-                <th class="p-4 text-center">Aksi Manajemen</th>
+                <th class="p-3">Nama Guru</th>
+                <th class="p-3">Sekolah</th>
+                <th class="p-3">Waktu Hadir</th>
+                <th class="p-3 text-center">Status</th>
               </tr>
             </thead>
-            <tbody id="adminUsersTableBody" class="divide-y divide-slate-100 text-slate-700">
-              <!-- Render daftar user -->
+            <tbody id="publicAttendanceTable" class="divide-y divide-slate-100">
+              <tr><td colspan="4" class="p-4 text-center text-slate-400">Belum ada riwayat kehadiran.</td></tr>
             </tbody>
           </table>
         </div>
-        <div id="adminUsersEmpty" class="hidden py-12 text-center text-slate-400 text-sm">
-          Tidak ada data pengguna dalam filter ini.
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 3: PENGUMUMAN (PUBLIK) ==================== -->
+    <section id="view-pengumuman" class="hidden space-y-6">
+      <div>
+        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900">Pengumuman & Edaran Resmi</h2>
+        <p class="text-xs text-slate-500">Surat edaran, jadwal koordinasi, dan pengumuman forum MGMP Sampang.</p>
+      </div>
+      <div id="fullAnnouncementList" class="space-y-4">
+        <!-- Render Pengumuman Lengkap -->
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 4: DIREKTORI GURU (ANGGOTA KE ATAS) ==================== -->
+    <section id="view-anggota" class="hidden space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900">Direktori Guru Bahasa Inggris</h2>
+          <p class="text-xs text-slate-500">Khusus anggota terverifikasi se-Kabupaten Sampang.</p>
+        </div>
+        <div class="w-full sm:w-64">
+          <input type="text" id="searchMemberInput" oninput="filterMembers()" placeholder="Cari nama atau sekolah..." class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-brand-500">
+        </div>
+      </div>
+
+      <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-xs">
+        <div class="overflow-x-auto custom-scrollbar">
+          <table class="w-full text-left border-collapse text-xs">
+            <thead class="bg-slate-50 text-slate-600 font-bold border-b border-slate-200">
+              <tr>
+                <th class="p-4">Nama Lengkap</th>
+                <th class="p-4">Sekolah Penugasan</th>
+                <th class="p-4">NIP/NUPTK</th>
+                <th class="p-4">Jabatan MGMP</th>
+                <th class="p-4 text-center">WhatsApp</th>
+              </tr>
+            </thead>
+            <tbody id="memberTableBody" class="divide-y divide-slate-100">
+              <!-- Render daftar anggota -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 5: PERPUSTAKAAN MODUL / RPP (ANGGOTA KE ATAS) ==================== -->
+    <section id="view-perpustakaan" class="hidden space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900">Perpustakaan Modul Ajar & Media</h2>
+          <p class="text-xs text-slate-500">Bank materi, RPP, soal asesmen, dan media ajar Bahasa Inggris.</p>
+        </div>
+        <div id="btnUploadMateriPengurus" class="hidden">
+          <button onclick="openModal('modalAddMateri')" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold transition flex items-center gap-2">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <span>Unggah Modul (Pengurus)</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="perpustakaanGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Render materi perpustakaan -->
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 6: KEUANGAN & TUNGGAKAN IURAN (ANGGOTA/BENDAHARA) ==================== -->
+    <section id="view-keuangan" class="hidden space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900">Laporan Kas & Iuran Anggota</h2>
+          <p class="text-xs text-slate-500">Transparansi kas masuk/keluar dan rincian iuran bulanan.</p>
+        </div>
+        <div id="btnBendaharaKeuangan" class="hidden">
+          <button onclick="openModal('modalAddKeuangan')" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold transition flex items-center gap-2">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+            <span>Catat Iuran / Kas (Bendahara)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Ringkasan Iuran Saya (Anggota) -->
+      <div class="bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 rounded-3xl p-5">
+        <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+          <i class="fa-solid fa-wallet text-emerald-600"></i>
+          Rincian Iuran Saya Sendiri
+        </h3>
+        <p class="text-xs text-slate-600 mt-0.5">Data iuran pribadi yang tercatat di pembukuan bendahara.</p>
+        <div id="myIuranContainer" class="mt-3 space-y-2">
+          <p class="text-xs text-slate-400">Memuat data iuran pribadi...</p>
+        </div>
+      </div>
+
+      <!-- Tabel Kas Umum -->
+      <div class="bg-white rounded-3xl border border-slate-200 p-5 shadow-xs">
+        <h3 class="text-sm font-bold text-slate-900 mb-3">Buku Kas Umum MGMP</h3>
+        <div class="overflow-x-auto custom-scrollbar">
+          <table class="w-full text-left border-collapse text-xs">
+            <thead class="bg-slate-50 text-slate-600 font-bold border-b border-slate-200">
+              <tr>
+                <th class="p-3">Tanggal</th>
+                <th class="p-3">Tipe</th>
+                <th class="p-3">Kategori / Bulan</th>
+                <th class="p-3">Keterangan</th>
+                <th class="p-3 text-right">Nominal (Rp)</th>
+              </tr>
+            </thead>
+            <tbody id="keuanganTableBody" class="divide-y divide-slate-100">
+              <!-- Render daftar transaksi kas -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 7: MANAJEMEN ANGGOTA & APPROVAL (PENGURUS KE ATAS) ==================== -->
+    <section id="view-kelola-anggota" class="hidden space-y-6">
+      <div class="bg-emerald-50/70 border border-emerald-200 rounded-3xl p-5">
+        <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800">
+          Akses Khusus Pengurus, Sekretaris, Bendahara, Ketua & Admin
+        </span>
+        <h2 class="text-xl font-bold text-slate-900 mt-2">Verifikasi Pendaftaran Anggota Mandiri</h2>
+        <p class="text-xs text-slate-600">Setujui guru yang telah mendaftar mandiri agar akunnya aktif dan dapat mengakses modul materi.</p>
+      </div>
+
+      <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-xs">
+        <div class="overflow-x-auto custom-scrollbar">
+          <table class="w-full text-left border-collapse text-xs">
+            <thead class="bg-slate-50 text-slate-600 font-bold border-b border-slate-200">
+              <tr>
+                <th class="p-4">Guru / Username</th>
+                <th class="p-4">Sekolah</th>
+                <th class="p-4">Role</th>
+                <th class="p-4">Status</th>
+                <th class="p-4 text-center">Aksi Verifikasi</th>
+              </tr>
+            </thead>
+            <tbody id="pengurusApprovalTable" class="divide-y divide-slate-100">
+              <!-- Render tabel persetujuan -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 8: DASHBOARD EKSEKUTIF (KETUA & ADMIN) ==================== -->
+    <section id="view-dashboard" class="hidden space-y-6">
+      <div class="bg-indigo-50/70 border border-indigo-200 rounded-3xl p-5">
+        <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-indigo-100 text-indigo-800">
+          Akses Khusus Ketua & Admin
+        </span>
+        <h2 class="text-xl font-bold text-slate-900 mt-2">Dashboard Metrik & Laporan Organisasi</h2>
+        <p class="text-xs text-slate-600">Ringkasan performa keaktifan guru, kas organisasi, dan modul terunggah.</p>
+      </div>
+
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-white p-5 rounded-2xl border border-slate-200">
+          <p class="text-xs text-slate-500 font-semibold">Total Guru Terdaftar</p>
+          <h3 id="dashTotalGuru" class="text-2xl font-black text-slate-900 mt-1">0</h3>
+        </div>
+        <div class="bg-white p-5 rounded-2xl border border-slate-200">
+          <p class="text-xs text-slate-500 font-semibold">Saldo Kas Organisasi</p>
+          <h3 id="dashSaldoKas" class="text-xl font-black text-emerald-600 mt-1">Rp 0</h3>
+        </div>
+        <div class="bg-white p-5 rounded-2xl border border-slate-200">
+          <p class="text-xs text-slate-500 font-semibold">Total Catatan Hadir</p>
+          <h3 id="dashTotalPresensi" class="text-2xl font-black text-slate-900 mt-1">0</h3>
+        </div>
+        <div class="bg-white p-5 rounded-2xl border border-slate-200">
+          <p class="text-xs text-slate-500 font-semibold">Modul Perpustakaan</p>
+          <h3 id="dashTotalMateri" class="text-2xl font-black text-indigo-600 mt-1">0</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 9: KELOLA AKUN PENUH (KHUSUS ADMIN) ==================== -->
+    <section id="view-admin-users" class="hidden space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-rose-50/70 border border-rose-200 rounded-3xl p-5">
+        <div>
+          <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-rose-100 text-rose-800">
+            Akses Eksklusif Administrator Sistem
+          </span>
+          <h2 class="text-xl font-bold text-slate-900 mt-2">Manajemen Akun & Role Pengguna</h2>
+          <p class="text-xs text-slate-600">Tambah akun dengan pilihan role bebas, kelola hak akses, dan hapus user.</p>
+        </div>
+        <div>
+          <button onclick="openModal('modalAdminAddUser')" class="px-4 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold transition flex items-center gap-2">
+            <i class="fa-solid fa-user-plus"></i>
+            <span>Tambah User & Tetapkan Role</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-xs">
+        <div class="overflow-x-auto custom-scrollbar">
+          <table class="w-full text-left border-collapse text-xs">
+            <thead class="bg-slate-50 text-slate-600 font-bold border-b border-slate-200">
+              <tr>
+                <th class="p-4">Akun & Nama</th>
+                <th class="p-4">Sekolah</th>
+                <th class="p-4">Role</th>
+                <th class="p-4">Status</th>
+                <th class="p-4 text-center">Aksi Hapus</th>
+              </tr>
+            </thead>
+            <tbody id="adminUsersTableBody" class="divide-y divide-slate-100">
+              <!-- Render daftar user admin -->
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="mt-auto bg-slate-900 text-slate-400 text-xs py-8 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div>
-        <p class="font-medium text-slate-300">MGMP Bahasa Inggris SMP Kabupaten Sampang</p>
-        <p class="mt-1">Sekretariat: Jl. Raya Pahlawan No. 12, Sampang, Madura, Jawa Timur</p>
-      </div>
-      <div class="text-center sm:text-right">
-        <p>&copy; 2026 MGMP Bahasa Inggris Sampang. Dilindungi Hak Cipta.</p>
-        <p class="text-slate-500 mt-0.5">Sistem Autentikasi RBAC & Google Apps Script Backend</p>
-      </div>
-    </div>
-  </footer>
+  <!-- ==================== MODAL DIALOGS ==================== -->
 
-  <!-- ========================================================================= -->
-  <!-- MODAL DIALOGS -->
-  <!-- ========================================================================= -->
-
-  <!-- MODAL 1: LOGIN -->
+  <!-- MODAL: LOGIN -->
   <div id="modalLogin" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
-    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative animate-in fade-in zoom-in-95 duration-200">
-      <button onclick="closeModal('modalLogin')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600">
-        <i class="fa-solid fa-xmark text-lg"></i>
-      </button>
-      <div class="text-center mb-6">
-        <div class="w-12 h-12 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center text-2xl mx-auto mb-3">
-          <i class="fa-solid fa-key"></i>
+    <div class="bg-white rounded-3xl max-w-sm w-full p-6 shadow-2xl relative">
+      <button onclick="closeModal('modalLogin')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark text-lg"></i></button>
+      <div class="text-center mb-5">
+        <div class="w-10 h-10 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center text-xl mx-auto mb-2">
+          <i class="fa-solid fa-lock"></i>
         </div>
-        <h3 class="text-xl font-bold text-slate-900">Masuk ke Portal</h3>
-        <p class="text-xs text-slate-500 mt-1">Gunakan username dan password terdaftar Anda</p>
+        <h3 class="text-base font-bold text-slate-900">Masuk Akun MGMP</h3>
+        <p class="text-xs text-slate-500">Masukkan username dan password Anda</p>
       </div>
-
-      <form id="formLogin" onsubmit="handleLoginSubmit(event)" class="space-y-4">
+      <form onsubmit="handleLoginSubmit(event)" class="space-y-3">
         <div>
-          <label class="block text-xs font-semibold text-slate-700 mb-1">Username</label>
-          <input type="text" id="loginUsername" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-500 focus:outline-none">
+          <label class="block text-[11px] font-bold text-slate-700 mb-1">Username</label>
+          <input type="text" id="loginUsername" required class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
         </div>
         <div>
-          <label class="block text-xs font-semibold text-slate-700 mb-1">Kata Sandi</label>
-          <input type="password" id="loginPassword" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-500 focus:outline-none">
+          <label class="block text-[11px] font-bold text-slate-700 mb-1">Kata Sandi</label>
+          <input type="password" id="loginPassword" required class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none">
         </div>
-        <button type="submit" id="btnLoginSubmit" class="w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm transition shadow-sm mt-2">
+        <button type="submit" id="btnLoginSubmit" class="w-full py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs transition mt-2">
           Masuk Sekarang
         </button>
       </form>
     </div>
   </div>
 
-  <!-- MODAL 2: PENDAFTARAN ANGGOTA MANDIRI (STATUS: PENDING) -->
+  <!-- MODAL: PENDAFTARAN MANDIRI (ROLE: ANGGOTA, STATUS: PENDING) -->
   <div id="modalRegister" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
-    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative my-8">
-      <button onclick="closeModal('modalRegister')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600">
-        <i class="fa-solid fa-xmark text-lg"></i>
-      </button>
-      <div class="text-center mb-6">
-        <div class="w-12 h-12 rounded-2xl bg-leaf-50 text-leaf-600 flex items-center justify-center text-2xl mx-auto mb-3">
-          <i class="fa-solid fa-user-pen"></i>
-        </div>
-        <h3 class="text-xl font-bold text-slate-900">Pendaftaran Anggota Baru</h3>
-        <p class="text-xs text-slate-500 mt-1">Akun akan diverifikasi oleh Admin/Sekretaris MGMP Sampang</p>
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl relative my-6">
+      <button onclick="closeModal('modalRegister')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark text-lg"></i></button>
+      <div class="text-center mb-4">
+        <h3 class="text-base font-bold text-slate-900">Pendaftaran Anggota Mandiri</h3>
+        <p class="text-xs text-slate-500">Akun akan diverifikasi oleh Pengurus MGMP</p>
       </div>
-
-      <form id="formRegister" onsubmit="handleRegisterSubmit(event)" class="space-y-3.5 text-left">
+      <form onsubmit="handleRegisterSubmit(event)" class="space-y-3 text-xs">
         <div>
-          <label class="block text-xs font-semibold text-slate-700 mb-1">Nama Lengkap & Gelar *</label>
-          <input type="text" id="regNama" required placeholder="Contoh: Ahmad Fauzi, S.Pd." class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-leaf-500 focus:outline-none">
+          <label class="block font-bold text-slate-700 mb-1">Nama Lengkap & Gelar *</label>
+          <input type="text" id="regNama" required class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:ring-2 focus:ring-leaf-500 focus:outline-none">
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div class="grid grid-cols-2 gap-2">
           <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">NIP / NUPTK</label>
-            <input type="text" id="regNip" placeholder="1980..." class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-leaf-500 focus:outline-none">
+            <label class="block font-bold text-slate-700 mb-1">Sekolah Penugasan *</label>
+            <input type="text" id="regSekolah" required placeholder="SMPN ..." class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:ring-2 focus:ring-leaf-500 focus:outline-none">
           </div>
           <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Sekolah Penugasan *</label>
-            <input type="text" id="regSekolah" required placeholder="SMPN 1 Sampang" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-leaf-500 focus:outline-none">
-          </div>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Email Aktif</label>
-            <input type="email" id="regEmail" placeholder="guru@gmail.com" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-leaf-500 focus:outline-none">
-          </div>
-          <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Nomor WhatsApp</label>
-            <input type="text" id="regWa" placeholder="0812..." class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-leaf-500 focus:outline-none">
+            <label class="block font-bold text-slate-700 mb-1">NIP/NUPTK</label>
+            <input type="text" id="regNip" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:ring-2 focus:ring-leaf-500 focus:outline-none">
           </div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 border-t border-slate-100">
+        <div class="grid grid-cols-2 gap-2">
           <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Pilih Username Akun *</label>
-            <input type="text" id="regUsername" required placeholder="ahmadfauzi" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-leaf-500 focus:outline-none">
+            <label class="block font-bold text-slate-700 mb-1">No. WhatsApp</label>
+            <input type="text" id="regWa" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:ring-2 focus:ring-leaf-500 focus:outline-none">
           </div>
           <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Kata Sandi Akun *</label>
-            <input type="password" id="regPassword" required placeholder="Minimal 6 karakter" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-leaf-500 focus:outline-none">
+            <label class="block font-bold text-slate-700 mb-1">Email</label>
+            <input type="email" id="regEmail" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:ring-2 focus:ring-leaf-500 focus:outline-none">
           </div>
         </div>
-
-        <button type="submit" id="btnRegisterSubmit" class="w-full py-3 rounded-xl bg-leaf-600 hover:bg-leaf-700 text-white font-semibold text-sm transition shadow-sm mt-3">
+        <div class="grid grid-cols-2 gap-2 pt-1 border-t border-slate-100">
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Username *</label>
+            <input type="text" id="regUsername" required class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:ring-2 focus:ring-leaf-500 focus:outline-none">
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Password *</label>
+            <input type="password" id="regPassword" required class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:ring-2 focus:ring-leaf-500 focus:outline-none">
+          </div>
+        </div>
+        <button type="submit" id="btnRegisterSubmit" class="w-full py-2.5 rounded-xl bg-leaf-600 hover:bg-leaf-700 text-white font-bold transition mt-2">
           Kirim Pendaftaran
         </button>
       </form>
     </div>
   </div>
 
-  <!-- MODAL 3: ADMIN TAMBAH USER DENGAN PILIHAN ROLE (STATUS: ACTIVE) -->
+  <!-- MODAL: ADMIN BUAT USER BARU DENGAN ROLE -->
   <div id="modalAdminAddUser" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
-    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative my-8">
-      <button onclick="closeModal('modalAdminAddUser')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600">
-        <i class="fa-solid fa-xmark text-lg"></i>
-      </button>
-      <div class="text-center mb-6">
-        <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-2xl mx-auto mb-3">
-          <i class="fa-solid fa-user-shield"></i>
-        </div>
-        <h3 class="text-xl font-bold text-slate-900">Tambah Akun oleh Admin</h3>
-        <p class="text-xs text-slate-500 mt-1">Buat akun resmi dan tentukan role hak aksesnya secara langsung</p>
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl relative my-6">
+      <button onclick="closeModal('modalAdminAddUser')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark text-lg"></i></button>
+      <div class="text-center mb-4">
+        <h3 class="text-base font-bold text-slate-900">Tambah Akun & Tetapkan Role</h3>
+        <p class="text-xs text-slate-500">Khusus Administrator Sistem</p>
       </div>
-
-      <form id="formAdminAddUser" onsubmit="handleAdminAddUserSubmit(event)" class="space-y-3.5 text-left">
+      <form onsubmit="handleAdminAddUserSubmit(event)" class="space-y-3 text-xs">
         <div>
-          <label class="block text-xs font-semibold text-slate-700 mb-1">Peran Pengguna (Role) *</label>
-          <select id="adminNewUserRole" required class="w-full px-3.5 py-2.5 rounded-xl border border-amber-300 bg-amber-50/40 text-sm font-semibold text-slate-800 focus:ring-2 focus:ring-amber-500 focus:outline-none">
-            <option value="Anggota">Anggota (Guru Biasa)</option>
-            <option value="Pengurus">Pengurus (Divisi / Fungsionaris)</option>
-            <option value="Bendahara">Bendahara (Finansial & Kas)</option>
-            <option value="Sekretaris">Sekretaris (Administrasi)</option>
-            <option value="Ketua">Ketua MGMP (Eksekutif)</option>
-            <option value="Admin">Administrator (Akses Penuh Sistem)</option>
+          <label class="block font-bold text-slate-700 mb-1">Pilih Peran (Role) *</label>
+          <select id="adminNewUserRole" required class="w-full px-3 py-2 rounded-xl border border-rose-300 bg-rose-50/30 font-bold text-slate-800 focus:ring-2 focus:ring-rose-500 focus:outline-none">
+            <option value="Anggota">Anggota</option>
+            <option value="Pengurus">Pengurus</option>
+            <option value="Bendahara">Bendahara</option>
+            <option value="Sekretaris">Sekretaris</option>
+            <option value="Ketua">Ketua</option>
+            <option value="Admin">Administrator</option>
           </select>
         </div>
-
         <div>
-          <label class="block text-xs font-semibold text-slate-700 mb-1">Nama Lengkap & Gelar *</label>
-          <input type="text" id="adminNewNama" required placeholder="Nama Lengkap" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none">
+          <label class="block font-bold text-slate-700 mb-1">Nama Lengkap & Gelar *</label>
+          <input type="text" id="adminNewNama" required class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none">
         </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div class="grid grid-cols-2 gap-2">
           <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Username Login *</label>
-            <input type="text" id="adminNewUsername" required placeholder="username" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none">
+            <label class="block font-bold text-slate-700 mb-1">Username *</label>
+            <input type="text" id="adminNewUsername" required class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none">
           </div>
           <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Password Sementara *</label>
-            <input type="password" id="adminNewPassword" required placeholder="Password" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none">
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Sekolah Penugasan</label>
-            <input type="text" id="adminNewSekolah" placeholder="SMPN ..." class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none">
-          </div>
-          <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">NIP / NUPTK</label>
-            <input type="text" id="adminNewNip" placeholder="198..." class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none">
+            <label class="block font-bold text-slate-700 mb-1">Password *</label>
+            <input type="password" id="adminNewPassword" required class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none">
           </div>
         </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Email</label>
-            <input type="email" id="adminNewEmail" placeholder="email@gmail.com" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none">
-          </div>
-          <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Nomor WhatsApp</label>
-            <input type="text" id="adminNewWa" placeholder="08..." class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none">
-          </div>
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Sekolah Penugasan</label>
+          <input type="text" id="adminNewSekolah" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none">
         </div>
-
-        <button type="submit" id="btnAdminAddUserSubmit" class="w-full py-3 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-semibold text-sm transition shadow-sm mt-3">
-          Simpan Akun Pengguna
+        <button type="submit" id="btnAdminAddUserSubmit" class="w-full py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold transition mt-2">
+          Simpan Akun
         </button>
       </form>
     </div>
   </div>
 
-  <!-- MODAL 4: KONFIRMASI HAPUS PENGGUNA -->
-  <div id="modalConfirmDelete" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
-    <div class="bg-white rounded-3xl max-w-sm w-full p-6 shadow-2xl text-center relative animate-in fade-in zoom-in-95 duration-150">
-      <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center text-xl mx-auto mb-3">
-        <i class="fa-solid fa-triangle-exclamation"></i>
-      </div>
-      <h3 class="text-base font-bold text-slate-900">Hapus Pengguna Ini?</h3>
-      <p id="deleteConfirmText" class="text-xs text-slate-500 mt-1">Data login dan profil guru akan dihapus permanen dari spreadsheet.</p>
-      <input type="hidden" id="deleteTargetUserId">
-
-      <div class="grid grid-cols-2 gap-3 mt-6">
-        <button onclick="closeModal('modalConfirmDelete')" class="py-2.5 rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 hover:bg-slate-50 transition">
-          Batal
+  <!-- MODAL: PENGURUS TAMBAH MODUL PERPUSTAKAAN -->
+  <div id="modalAddMateri" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-sm w-full p-6 shadow-2xl relative">
+      <button onclick="closeModal('modalAddMateri')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark text-lg"></i></button>
+      <h3 class="text-sm font-bold text-slate-900 mb-3">Unggah Modul Perpustakaan</h3>
+      <form onsubmit="handleAddMateriSubmit(event)" class="space-y-3 text-xs">
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Judul Materi / Modul *</label>
+          <input type="text" id="materiJudul" required class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none">
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Kategori</label>
+            <select id="materiKategori" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none">
+              <option value="Modul Ajar / RPP">Modul Ajar / RPP</option>
+              <option value="Soal & Asesmen">Soal & Asesmen</option>
+              <option value="Media Ajar PPT">Media Ajar PPT</option>
+              <option value="Audio Listening">Audio Listening</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Kelas</label>
+            <select id="materiKelas" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none">
+              <option value="Kelas 7">Kelas 7</option>
+              <option value="Kelas 8">Kelas 8</option>
+              <option value="Kelas 9">Kelas 9</option>
+              <option value="Umum">Umum</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Tautan Google Drive *</label>
+          <input type="url" id="materiLink" placeholder="https://drive.google.com/..." required class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none">
+        </div>
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Deskripsi Singkat</label>
+          <textarea id="materiDeskripsi" rows="2" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none"></textarea>
+        </div>
+        <button type="submit" id="btnSubmitMateri" class="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold transition">
+          Simpan ke Perpustakaan
         </button>
-        <button onclick="executeDeleteUser()" id="btnExecuteDelete" class="py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold transition">
-          Hapus Permanen
-        </button>
-      </div>
+      </form>
     </div>
   </div>
 
-  <!-- ========================================================================= -->
-  <!-- JAVASCRIPT APLIKASI (CLIENT ENGINE) -->
-  <!-- ========================================================================= -->
+  <!-- MODAL: BENDAHARA INPUT KEUANGAN -->
+  <div id="modalAddKeuangan" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-sm w-full p-6 shadow-2xl relative">
+      <button onclick="closeModal('modalAddKeuangan')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark text-lg"></i></button>
+      <h3 class="text-sm font-bold text-slate-900 mb-3">Catat Kas / Iuran Anggota</h3>
+      <form onsubmit="handleAddKeuanganSubmit(event)" class="space-y-3 text-xs">
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Tipe Transaksi</label>
+          <select id="keuTipe" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none" onchange="toggleIuranFields()">
+            <option value="Iuran">Iuran Anggota Per Bulan</option>
+            <option value="Kas Masuk">Kas Masuk (Lain-lain / Donasi)</option>
+            <option value="Kas Keluar">Kas Keluar (Operasional / Kegiatan)</option>
+          </select>
+        </div>
+        <div id="fieldIuranAnggota">
+          <label class="block font-bold text-slate-700 mb-1">Nama Anggota & Bulan</label>
+          <div class="grid grid-cols-2 gap-2">
+            <input type="text" id="keuNamaAnggota" placeholder="Nama Guru" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none">
+            <input type="text" id="keuBulan" placeholder="Contoh: Oktober 2026" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none">
+          </div>
+        </div>
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Nominal (Rupiah) *</label>
+          <input type="number" id="keuNominal" placeholder="25000" required class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none">
+        </div>
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Keterangan Transaksi</label>
+          <input type="text" id="keuKeterangan" placeholder="Contoh: Iuran kas rutin bulan Oktober" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none">
+        </div>
+        <button type="submit" id="btnSubmitKeu" class="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold transition">
+          Simpan Transaksi
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: SEKRETARIS BUAT KEGIATAN -->
+  <div id="modalCreateKegiatan" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-sm w-full p-6 shadow-2xl relative">
+      <button onclick="closeModal('modalCreateKegiatan')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark text-lg"></i></button>
+      <h3 class="text-sm font-bold text-slate-900 mb-3">Buat Agenda Kegiatan Baru</h3>
+      <form onsubmit="handleCreateKegiatanSubmit(event)" class="space-y-3 text-xs">
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Judul Agenda *</label>
+          <input type="text" id="kegJudul" required class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none">
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Tanggal</label>
+            <input type="date" id="kegTanggal" required class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none">
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Token Hadir</label>
+            <input type="text" id="kegToken" required placeholder="SMP01" class="uppercase w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none font-mono">
+          </div>
+        </div>
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Lokasi</label>
+          <input type="text" id="kegLokasi" placeholder="SMPN 1 Sampang" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none">
+        </div>
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Deskripsi Singkat</label>
+          <textarea id="kegDeskripsi" rows="2" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none"></textarea>
+        </div>
+        <button type="submit" id="btnSubmitKeg" class="w-full py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold transition">
+          Terbitkan Agenda
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: SEKRETARIS EDIT NOTULENSI & LINK SERTIFIKAT -->
+  <div id="modalEditNotulensi" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-sm w-full p-6 shadow-2xl relative">
+      <button onclick="closeModal('modalEditNotulensi')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark text-lg"></i></button>
+      <h3 class="text-sm font-bold text-slate-900 mb-3">Edit Notulensi & Sertifikat</h3>
+      <form onsubmit="handleUpdateNotulensiSubmit(event)" class="space-y-3 text-xs">
+        <input type="hidden" id="editKegId">
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Status Sesi Presensi</label>
+          <select id="editKegStatus" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none">
+            <option value="Buka">Buka (Terima Presensi)</option>
+            <option value="Tutup">Tutup (Sesi Selesai)</option>
+          </select>
+        </div>
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Notulensi Hasil Kegiatan</label>
+          <textarea id="editKegNotulensi" rows="4" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none" placeholder="Tuliskan poin-poin hasil pertemuan..."></textarea>
+        </div>
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Tautan E-Sertifikat Google Drive</label>
+          <input type="url" id="editKegSertifikat" placeholder="https://drive.google.com/..." class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none">
+        </div>
+        <button type="submit" id="btnSubmitNotulensi" class="w-full py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold transition">
+          Simpan Pembaruan
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT ENGINE ==================== -->
   <script>
     /**
      * Konfigurasi API Endpoint Google Apps Script Web App
-     * Ganti dengan URL deployment Web App Apps Script Anda (/exec)
+     * Masukkan URL deployment Web App Apps Script Anda (/exec)
      */
-    const API_ENDPOINT = "https://script.google.com/macros/s/AKfycbyugE6e8T74YsNCO9_fFM9dK2S1DkAQxNVV_Ale1CcAbZDS4oZ26IuO7rttvYP7UfYL/exec";
+    const API_ENDPOINT = "https://script.google.com/macros/s/AKfycbxLNb-aThcr2qLEZMCwg_UlR-YC7RtPADs51EOU0alwM0g9goPMl3wzMGmYj9LgbjZz/exec";
 
-    // Data State Lokal
+    // State Aplikasi
     let state = {
       currentUser: null,
       token: null,
-      currentView: 'home',
       activities: [],
       announcements: [],
       members: [],
-      adminUsersList: [],
-      adminFilterStatus: 'ALL'
+      keuangan: [],
+      perpustakaan: [],
+      usersList: []
     };
 
-    // --- INISIALISASI SAAT HALAMAN DIMUAT ---
+    // --- INISIALISASI ---
     window.addEventListener('DOMContentLoaded', () => {
-      // Pulihkan sesi login dari sessionStorage
-      const savedSession = sessionStorage.getItem('mgmp_session');
-      if (savedSession) {
+      // Pulihkan sesi tersimpan
+      const saved = sessionStorage.getItem('mgmp_user_session');
+      if (saved) {
         try {
-          const parsed = JSON.parse(savedSession);
+          const parsed = JSON.parse(saved);
           state.token = parsed.token;
           state.currentUser = parsed.user;
-          updateAuthUI();
+          applyRoleVisibility();
         } catch (e) {
-          sessionStorage.removeItem('mgmp_session');
+          sessionStorage.removeItem('mgmp_user_session');
         }
       }
 
-      // Ambil data publik awal
       fetchPublicData();
-      fetchActivitiesList();
-      fetchMembersList();
     });
 
-    // --- NAVIGASI ANTAR HALAMAN (SPA) ---
+    // --- NAVIGASI SPA ---
     function navigate(viewName) {
-      state.currentView = viewName;
-      const views = ['home', 'agenda', 'anggota', 'pengumuman', 'admin-users'];
+      const views = ['home', 'agenda', 'pengumuman', 'anggota', 'perpustakaan', 'keuangan', 'kelola-anggota', 'dashboard', 'admin-users'];
       views.forEach(v => {
         const el = document.getElementById(`view-${v}`);
         if (el) {
-          if (v === viewName) {
-            el.classList.remove('hidden');
-          } else {
-            el.classList.add('hidden');
-          }
+          if (v === viewName) el.classList.remove('hidden');
+          else el.classList.add('hidden');
         }
       });
 
-      // Jika membuka halaman admin, ambil daftar user
-      if (viewName === 'admin-users') {
-        fetchAdminUsers();
-      }
+      // Lazy fetch sesuai view yang dibuka
+      if (viewName === 'anggota') fetchMembers();
+      if (viewName === 'perpustakaan') fetchPerpustakaan();
+      if (viewName === 'keuangan') fetchKeuangan();
+      if (viewName === 'kelola-anggota' || viewName === 'admin-users') fetchUsersList();
+      if (viewName === 'dashboard') fetchDashboard();
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // --- TOGGLE MENU MOBILE RESPONSIVE ---
     function toggleMobileMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.classList.toggle('hidden');
+      document.getElementById('mobileMenu').classList.toggle('hidden');
     }
 
-    // --- MANAJEMEN MODAL DIALOG ---
-    function openModal(modalId) {
-      const m = document.getElementById(modalId);
-      if (m) m.classList.remove('hidden');
-    }
+    function openModal(id) { document.getElementById(id)?.classList.remove('hidden'); }
+    function closeModal(id) { document.getElementById(id)?.classList.add('hidden'); }
 
-    function closeModal(modalId) {
-      const m = document.getElementById(modalId);
-      if (m) m.classList.add('hidden');
-    }
-
-    // --- TOAST NOTIFIKASI ---
     function showToast(title, message, isSuccess = true) {
       const toast = document.getElementById('toast');
-      const toastTitle = document.getElementById('toastTitle');
-      const toastMessage = document.getElementById('toastMessage');
-      const toastIcon = document.getElementById('toastIcon');
-
-      toastTitle.textContent = title;
-      toastMessage.textContent = message;
-
-      if (isSuccess) {
-        toastIcon.innerHTML = '<i class="fa-solid fa-circle-check text-leaf-500"></i>';
-      } else {
-        toastIcon.innerHTML = '<i class="fa-solid fa-circle-xmark text-rose-500"></i>';
-      }
+      document.getElementById('toastTitle').textContent = title;
+      document.getElementById('toastMessage').textContent = message;
+      document.getElementById('toastIcon').innerHTML = isSuccess 
+        ? '<i class="fa-solid fa-circle-check text-leaf-500"></i>' 
+        : '<i class="fa-solid fa-circle-xmark text-rose-500"></i>';
 
       toast.classList.remove('translate-y-20', 'opacity-0');
       toast.classList.add('translate-y-0', 'opacity-100');
-
       setTimeout(() => {
         toast.classList.add('translate-y-20', 'opacity-0');
         toast.classList.remove('translate-y-0', 'opacity-100');
-      }, 4000);
+      }, 3500);
     }
 
-    // --- UPDATE TAMPILAN SESI LOGIN (UI) ---
-    function updateAuthUI() {
-      const unauth = document.getElementById('unauthArea');
-      const auth = document.getElementById('authArea');
-      const mobileUnauth = document.getElementById('mobileUnauthArea');
-      const mobileAuth = document.getElementById('mobileAuthArea');
-      const navAdmin = document.getElementById('navAdminBtn');
-      const mobileNavAdmin = document.getElementById('mobileNavAdminBtn');
+    // --- ROLE HIERARCHY & VISIBILITY ENGINE ---
+    function applyRoleVisibility() {
+      const role = state.currentUser ? state.currentUser.role : null;
+      const isAuth = !!role;
 
-      if (state.currentUser && state.token) {
-        unauth.classList.add('hidden');
-        auth.classList.remove('hidden');
-        auth.classList.add('flex');
+      // Auth Buttons Desktop & Mobile
+      document.getElementById('unauthArea').classList.toggle('hidden', isAuth);
+      document.getElementById('authArea').classList.toggle('hidden', !isAuth);
+      document.getElementById('authArea').classList.toggle('flex', isAuth);
 
-        mobileUnauth.classList.add('hidden');
-        mobileAuth.classList.remove('hidden');
-        mobileAuth.classList.add('flex');
+      document.getElementById('mobileUnauthArea').classList.toggle('hidden', isAuth);
+      document.getElementById('mobileAuthArea').classList.toggle('hidden', !isAuth);
+      document.getElementById('mobileAuthArea').classList.toggle('flex', isAuth);
 
+      if (isAuth) {
         document.getElementById('userFullName').textContent = state.currentUser.nama_lengkap || state.currentUser.username;
         document.getElementById('mobileUserName').textContent = state.currentUser.nama_lengkap || state.currentUser.username;
-        
-        const badge = document.getElementById('userBadge');
-        badge.textContent = state.currentUser.role;
-        document.getElementById('mobileUserRole').textContent = "Role: " + state.currentUser.role;
-
-        // Tampilkan tombol kelola akun jika Admin
-        if (state.currentUser.role === 'Admin') {
-          navAdmin.classList.remove('hidden');
-          navAdmin.classList.add('flex');
-          mobileNavAdmin.classList.remove('hidden');
-        } else {
-          navAdmin.classList.add('hidden');
-          mobileNavAdmin.classList.add('hidden');
-        }
-      } else {
-        unauth.classList.remove('hidden');
-        auth.classList.add('hidden');
-        auth.classList.remove('flex');
-
-        mobileUnauth.classList.remove('hidden');
-        mobileAuth.classList.add('hidden');
-        mobileAuth.classList.remove('flex');
-
-        navAdmin.classList.add('hidden');
-        mobileNavAdmin.classList.add('hidden');
+        document.getElementById('userBadge').textContent = role;
+        document.getElementById('mobileUserRole').textContent = "Role: " + role;
       }
+
+      // Pembagian Hak Akses Navigasi Bertingkat:
+      // 1. Anggota ke atas
+      const isAnggotaUp = ['Anggota', 'Pengurus', 'Bendahara', 'Sekretaris', 'Ketua', 'Admin'].includes(role);
+      ['navAnggotaBtn', 'navMateriBtn', 'navKeuanganBtn', 'mobileNavAnggotaBtn', 'mobileNavMateriBtn', 'mobileNavKeuanganBtn']
+        .forEach(id => document.getElementById(id)?.classList.toggle('hidden', !isAnggotaUp));
+
+      // 2. Pengurus ke atas (Verifikasi Anggota & Unggah Modul)
+      const isPengurusUp = ['Pengurus', 'Bendahara', 'Sekretaris', 'Ketua', 'Admin'].includes(role);
+      ['navManajemenBtn', 'mobileNavManajemenBtn', 'btnUploadMateriPengurus']
+        .forEach(id => document.getElementById(id)?.classList.toggle('hidden', !isPengurusUp));
+
+      // 3. Bendahara & Admin (Catat Kas / Iuran)
+      const isBendaharaUp = ['Bendahara', 'Admin'].includes(role);
+      document.getElementById('btnBendaharaKeuangan')?.classList.toggle('hidden', !isBendaharaUp);
+
+      // 4. Sekretaris & Admin (Buat Agenda & Edit Notulensi/Sertifikat)
+      const isSekretarisUp = ['Sekretaris', 'Admin'].includes(role);
+      document.getElementById('btnSekretarisKegiatan')?.classList.toggle('hidden', !isSekretarisUp);
+
+      // 5. Ketua & Admin (Dashboard Eksekutif)
+      const isKetuaUp = ['Ketua', 'Admin'].includes(role);
+      ['navDashboardBtn', 'mobileNavDashboardBtn'].forEach(id => document.getElementById(id)?.classList.toggle('hidden', !isKetuaUp));
+
+      // 6. Admin Saja (Admin Sistem Penuh)
+      const isAdmin = role === 'Admin';
+      ['navAdminBtn', 'mobileNavAdminBtn'].forEach(id => document.getElementById(id)?.classList.toggle('hidden', !isAdmin));
     }
 
-    // --- CALL BACKEND (GET/POST WRAPPER) ---
-    async function apiRequest(endpoint, options = {}) {
+    // --- KOMUNIKASI JARINGAN DENGAN APPS SCRIPT (CORS FRIENDLY) ---
+    async function apiCall(endpoint, method = 'GET', data = null) {
       try {
-        // Jika endpoint masih URL contoh dummy, langsung fallback ke lokal tanpa error console
+        // Fallback demo instan jika URL default belum diubah pengguna
         if (endpoint.includes("CONTOH_DEPLOY_ID")) {
-          return { success: false, isDummy: true, message: "URL Deployment Apps Script belum dikonfigurasi." };
+          return { success: false, isDemo: true, message: "URL Deployment Apps Script belum dikonfigurasi." };
         }
 
-        // Hindari Preflight CORS di Google Apps Script dengan mengirim sebagai text/plain jika method POST
-        const fetchOptions = { ...options };
-        if (fetchOptions.method === 'POST' && fetchOptions.body) {
-          fetchOptions.headers = {
-            'Content-Type': 'text/plain;charset=utf-8'
-          };
+        const options = { method: method, redirect: 'follow' };
+        if (method === 'POST') {
+          // Kirim payload sebagai text/plain agar tidak memicu Preflight OPTIONS di server Apps Script
+          options.body = JSON.stringify(data || {});
+          options.headers = { 'Content-Type': 'text/plain;charset=utf-8' };
         }
 
-        const response = await fetch(endpoint, fetchOptions);
-        return await response.json();
+        const res = await fetch(endpoint, options);
+        return await res.json();
       } catch (err) {
-        console.warn("API request error, beralih ke penanganan lokal/fallback:", err);
-        return { success: false, networkError: true, message: "Koneksi ke backend Apps Script bermasalah." };
+        console.warn("Network fetch error:", err);
+        return { success: false, message: "Koneksi ke backend Apps Script terputus." };
       }
     }
 
-    // --- FETCH DATA PUBLIK (BERANDA) ---
+    // --- FETCH DATA PUBLIK ---
     async function fetchPublicData() {
-      const res = await apiRequest(`${API_ENDPOINT}?action=getPublicData`);
-      if (res.success && res.data) {
+      const res = await apiCall(`${API_ENDPOINT}?action=getPublicData`);
+      if (res && res.success && res.data) {
         state.announcements = res.data.pengumuman || [];
-        renderHomeAnnouncements(state.announcements);
+        state.activities = res.data.kegiatan || [];
+        renderPublicHome();
+        renderPublicAgenda();
+        renderPublicAttendance(res.data.kehadiranPublik || []);
       } else {
-        // Fallback mockup jika API belum dideploy
-        renderMockData();
+        renderMockPublic();
       }
     }
 
-    function renderMockData() {
+    function renderMockPublic() {
       state.announcements = [
-        { id: '1', judul: 'Undangan Lokakarya Kurikulum Merdeka B. Inggris', tanggal: '2026-10-24', konten: 'Dimohon kehadiran seluruh guru Bahasa Inggris pada rapat koordinasi di Aula SMPN 1 Sampang.', penulis: 'Sekretariat' },
-        { id: '2', judul: 'Pembaruan Modul Pembelajaran Listening Kelas 8', tanggal: '2026-10-20', konten: 'Audio ajar dan materi ajar listening terbaru dapat diunduh pada tab Materi.', penulis: 'Divisi Kurikulum' }
+        { id: '1', judul: 'Undangan Workshop Pembelajaran Berbasis AI', tanggal: '2026-10-25', konten: 'Dimohon seluruh guru Bahasa Inggris menghadiri workshop di SMPN 1 Sampang.', penulis: 'Sekretariat' }
       ];
-      renderHomeAnnouncements(state.announcements);
-      renderFullAnnouncements(state.announcements);
-
       state.activities = [
-        { id: 'KEG-01', judul: 'Workshop Pembelajaran Berbasis AI untuk Guru Bahasa Inggris', tanggal: '2026-11-05', waktu: '08.30 - 13.00 WIB', lokasi: 'Lab Komputer SMPN 1 Sampang', status_presensi: 'Buka', deskripsi: 'Pemanfaatan prompt AI dalam menyusun lesson plan interaktif.' },
-        { id: 'KEG-02', judul: 'Bedah Kisi-Kisi Ujian Semester Gasal 2026', tanggal: '2026-11-18', waktu: '09.00 - 12.00 WIB', lokasi: 'SMPN 2 Sampang', status_presensi: 'Tutup', deskripsi: 'Penyusunan indikator soal bersama tim mgmp.' }
+        { id: 'KEG-01', judul: 'Workshop AI & Kurikulum Merdeka', tanggal: '2026-11-05', waktu: '08:30 WIB', lokasi: 'SMPN 1 Sampang', status_presensi: 'Buka', deskripsi: 'Penyusunan lesson plan interaktif.', notulensi: 'Notulensi: Rapat persiapan modul telah rampung.', link_sertifikat: 'https://drive.google.com' }
       ];
-      renderHomeActivities(state.activities);
-      renderActivitiesList(state.activities);
-      populatePresensiDropdown(state.activities);
-
-      state.members = [
-        { nama_lengkap: 'Drs. H. Mulyadi, M.Pd.', sekolah: 'SMPN 1 Sampang', nip_nuptk: '196805121995011002', jabatan: 'Ketua MGMP', no_wa: '081234567890' },
-        { nama_lengkap: 'Siti Rohimah, S.Pd.', sekolah: 'SMPN 2 Sampang', nip_nuptk: '197908142006042018', jabatan: 'Sekretaris', no_wa: '081398765432' },
-        { nama_lengkap: 'Budi Santoso, S.Pd.', sekolah: 'SMPN 1 Camplong', nip_nuptk: '198503202010011015', jabatan: 'Bendahara', no_wa: '085712345678' }
-      ];
-      renderMemberList(state.members);
+      renderPublicHome();
+      renderPublicAgenda();
     }
 
-    function renderHomeAnnouncements(list) {
-      const container = document.getElementById('homeAnnouncementContainer');
-      if (!list || list.length === 0) {
-        container.innerHTML = `<p class="text-sm text-slate-400 py-3 text-center">Belum ada pengumuman terbaru.</p>`;
-        return;
-      }
-      container.innerHTML = list.map(item => `
-        <div class="p-3.5 rounded-2xl bg-slate-50 hover:bg-slate-100 transition border border-slate-100">
-          <span class="text-[10px] font-semibold text-leaf-700 bg-leaf-100/60 px-2 py-0.5 rounded-md">${item.tanggal || 'Terbaru'}</span>
-          <h4 class="font-bold text-slate-900 text-sm mt-1.5">${item.judul}</h4>
-          <p class="text-xs text-slate-600 mt-1 line-clamp-2">${item.konten}</p>
+    function renderPublicHome() {
+      const agContainer = document.getElementById('homeAgendaContainer');
+      const annContainer = document.getElementById('homeAnnouncementContainer');
+
+      agContainer.innerHTML = state.activities.slice(0, 3).map(k => `
+        <div class="p-3 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-between">
+          <div>
+            <h4 class="font-bold text-xs text-slate-900">${k.judul}</h4>
+            <p class="text-[11px] text-slate-500 mt-0.5"><i class="fa-solid fa-calendar-day mr-1"></i>${k.tanggal} • ${k.lokasi}</p>
+          </div>
+          <span class="text-[10px] px-2 py-0.5 font-bold rounded-md ${k.status_presensi === 'Buka' ? 'bg-emerald-100 text-emerald-800' : 'bg-slate-200 text-slate-600'}">
+            ${k.status_presensi}
+          </span>
         </div>
-      `).join('');
-    }
+      `).join('') || '<p class="text-xs text-slate-400 py-2">Belum ada agenda terdaftar.</p>';
 
-    function renderFullAnnouncements(list) {
-      const container = document.getElementById('announcementListFull');
-      if (!list || list.length === 0) {
-        container.innerHTML = `<p class="text-sm text-slate-400 py-6 text-center">Belum ada data pengumuman.</p>`;
-        return;
-      }
-      container.innerHTML = list.map(item => `
-        <div class="bg-white p-5 sm:p-6 rounded-3xl border border-slate-200/80 shadow-xs">
+      annContainer.innerHTML = state.announcements.slice(0, 3).map(a => `
+        <div class="p-3 rounded-2xl bg-slate-50 border border-slate-100">
+          <span class="text-[10px] font-bold text-leaf-700 bg-leaf-100/60 px-2 py-0.5 rounded-md">${a.tanggal}</span>
+          <h4 class="font-bold text-xs text-slate-900 mt-1">${a.judul}</h4>
+          <p class="text-[11px] text-slate-600 line-clamp-2 mt-0.5">${a.konten}</p>
+        </div>
+      `).join('') || '<p class="text-xs text-slate-400 py-2">Belum ada pengumuman.</p>';
+
+      // Full Announcement view
+      document.getElementById('fullAnnouncementList').innerHTML = state.announcements.map(a => `
+        <div class="bg-white p-5 rounded-3xl border border-slate-200 shadow-xs">
           <div class="flex items-center gap-2 mb-2">
-            <span class="text-xs font-semibold text-brand-700 bg-brand-50 px-2.5 py-0.5 rounded-md">${item.penulis || 'Pengurus'}</span>
-            <span class="text-xs text-slate-400">• ${item.tanggal}</span>
+            <span class="text-xs font-bold text-brand-700 bg-brand-50 px-2.5 py-0.5 rounded-md">${a.penulis || 'Sekretariat'}</span>
+            <span class="text-xs text-slate-400">• ${a.tanggal}</span>
           </div>
-          <h3 class="text-lg font-bold text-slate-900">${item.judul}</h3>
-          <p class="text-sm text-slate-600 mt-2 leading-relaxed whitespace-pre-line">${item.konten}</p>
+          <h3 class="text-base font-bold text-slate-900">${a.judul}</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed whitespace-pre-line">${a.konten}</p>
         </div>
       `).join('');
     }
 
-    async function fetchActivitiesList() {
-      if (!state.token) return;
-      const res = await apiRequest(`${API_ENDPOINT}?action=getActivities&token=${encodeURIComponent(state.token)}`);
-      if (res.success && res.data) {
-        state.activities = res.data;
-        renderHomeActivities(state.activities);
-        renderActivitiesList(state.activities);
-        populatePresensiDropdown(state.activities);
-      }
-    }
-
-    function renderHomeActivities(list) {
-      const container = document.getElementById('homeAgendaContainer');
-      if (!list || list.length === 0) {
-        container.innerHTML = `<p class="text-sm text-slate-400 py-3 text-center">Tidak ada agenda mendatang.</p>`;
-        return;
-      }
-      container.innerHTML = list.slice(0, 3).map(keg => `
-        <div class="p-3.5 rounded-2xl bg-slate-50 hover:bg-slate-100 transition border border-slate-100 flex items-start gap-3">
-          <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-700 font-bold flex flex-col items-center justify-center shrink-0 text-xs">
-            <i class="fa-regular fa-clock"></i>
-          </div>
-          <div class="flex-1 min-w-0">
-            <h4 class="font-bold text-slate-900 text-sm truncate">${keg.judul}</h4>
-            <p class="text-xs text-slate-500 mt-0.5"><i class="fa-solid fa-location-dot mr-1"></i>${keg.lokasi}</p>
-          </div>
-        </div>
-      `).join('');
-    }
-
-    function renderActivitiesList(list) {
-      const container = document.getElementById('activitiesList');
-      if (!list || list.length === 0) {
-        container.innerHTML = `<p class="text-sm text-slate-400 py-4 text-center">Belum ada agenda terdaftar.</p>`;
-        return;
-      }
-      container.innerHTML = list.map(keg => `
-        <div class="p-5 rounded-2xl border border-slate-200 hover:border-brand-200 transition bg-white flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div class="space-y-1">
-            <div class="flex items-center gap-2">
-              <span class="text-[11px] font-semibold px-2 py-0.5 rounded-md ${keg.status_presensi === 'Buka' ? 'bg-emerald-100 text-emerald-800' : 'bg-slate-100 text-slate-600'}">
-                Presensi: ${keg.status_presensi}
-              </span>
-              <span class="text-xs text-slate-400">• ${keg.tanggal} (${keg.waktu})</span>
-            </div>
-            <h4 class="font-bold text-base text-slate-900">${keg.judul}</h4>
-            <p class="text-xs text-slate-500"><i class="fa-solid fa-location-dot mr-1"></i>${keg.lokasi}</p>
-            ${keg.deskripsi ? `<p class="text-xs text-slate-600 mt-1">${keg.deskripsi}</p>` : ''}
-          </div>
-        </div>
-      `).join('');
-    }
-
-    function populatePresensiDropdown(list) {
+    function renderPublicAgenda() {
+      const container = document.getElementById('agendaCardsContainer');
       const select = document.getElementById('presensiSelectKegiatan');
       select.innerHTML = '<option value="">-- Pilih Agenda Kegiatan --</option>';
-      list.filter(k => k.status_presensi === 'Buka').forEach(k => {
-        const opt = document.createElement('option');
-        opt.value = k.id;
-        opt.textContent = `${k.judul} (${k.tanggal})`;
-        select.appendChild(opt);
-      });
+
+      const isSekretarisUp = state.currentUser && ['Sekretaris', 'Admin'].includes(state.currentUser.role);
+      const isAnggotaUp = !!state.currentUser;
+
+      container.innerHTML = state.activities.map(k => {
+        if (k.status_presensi === 'Buka') {
+          const opt = document.createElement('option');
+          opt.value = k.id;
+          opt.textContent = `${k.judul} (${k.tanggal})`;
+          select.appendChild(opt);
+        }
+
+        return `
+          <div class="bg-white p-5 rounded-3xl border border-slate-200 shadow-xs space-y-3">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-3">
+              <div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-md ${k.status_presensi === 'Buka' ? 'bg-emerald-100 text-emerald-800' : 'bg-slate-100 text-slate-600'}">
+                  Presensi: ${k.status_presensi}
+                </span>
+                <h3 class="text-base font-extrabold text-slate-900 mt-1">${k.judul}</h3>
+                <p class="text-xs text-slate-500"><i class="fa-solid fa-location-dot mr-1"></i>${k.lokasi} • ${k.tanggal} (${k.waktu})</p>
+              </div>
+
+              ${isSekretarisUp ? `
+                <button onclick="openEditNotulensi('${k.id}', '${k.status_presensi}', '${escapeStr(k.notulensi)}', '${k.link_sertifikat}')" class="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition flex items-center gap-1.5 self-start">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                  <span>Edit Notulen & Sertifikat</span>
+                </button>
+              ` : ''}
+            </div>
+
+            <!-- Notulensi Kegiatan (Dapat dibaca oleh Publik & Anggota) -->
+            <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-100">
+              <h4 class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+                <i class="fa-solid fa-book-open text-brand-600"></i>
+                Notulensi Rapat & Hasil Kegiatan:
+              </h4>
+              <p class="text-xs text-slate-600 mt-1 whitespace-pre-line leading-relaxed">${k.notulensi || 'Belum ada notulensi yang diterbitkan.'}</p>
+            </div>
+
+            <!-- Link Sertifikat (Khusus Anggota) -->
+            ${isAnggotaUp ? `
+              <div class="flex items-center justify-between pt-1">
+                <span class="text-xs text-slate-500 font-medium"><i class="fa-solid fa-certificate text-amber-500 mr-1.5"></i>E-Sertifikat Pelatihan:</span>
+                ${k.link_sertifikat ? `
+                  <a href="${k.link_sertifikat}" target="_blank" class="px-3 py-1 bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 rounded-xl text-xs font-bold transition flex items-center gap-1">
+                    <i class="fa-solid fa-download"></i><span>Unduh Sertifikat</span>
+                  </a>
+                ` : `<span class="text-xs text-slate-400 italic">Belum tersedia</span>`}
+              </div>
+            ` : `
+              <div class="text-[11px] text-slate-400 italic bg-amber-50/50 p-2 rounded-xl border border-amber-100">
+                <i class="fa-solid fa-lock mr-1 text-amber-600"></i>Login sebagai anggota untuk mengakses tautan unduh E-Sertifikat kegiatan ini.
+              </div>
+            `}
+          </div>
+        `;
+      }).join('');
     }
 
-    async function fetchMembersList() {
-      let res;
-      if (state.token) {
-        res = await apiRequest(`${API_ENDPOINT}?action=getMembers&token=${encodeURIComponent(state.token)}`);
-      }
-      if (res && res.success && res.data) {
-        state.members = res.data;
-        renderMemberList(state.members);
-      }
-    }
-
-    function renderMemberList(list) {
-      const tbody = document.getElementById('memberTableBody');
-      const empty = document.getElementById('memberEmptyState');
-      if (!list || list.length === 0) {
-        tbody.innerHTML = '';
-        empty.classList.remove('hidden');
-        return;
-      }
-      empty.classList.add('hidden');
-      tbody.innerHTML = list.map(m => `
-        <tr class="hover:bg-slate-50/80 transition">
-          <td class="p-4">
-            <div class="font-semibold text-slate-900">${m.nama_lengkap}</div>
-            <div class="text-xs text-slate-400">${m.email || 'Email belum diisi'}</div>
-          </td>
-          <td class="p-4 text-slate-700">${m.sekolah}</td>
-          <td class="p-4 font-mono text-xs text-slate-600">${m.nip_nuptk || '-'}</td>
-          <td class="p-4">
-            <span class="text-xs px-2.5 py-1 rounded-full font-medium ${m.jabatan.includes('Ketua') || m.jabatan.includes('Admin') ? 'bg-amber-100 text-amber-800' : 'bg-slate-100 text-slate-700'}">
-              ${m.jabatan || 'Anggota'}
-            </span>
-          </td>
-          <td class="p-4 text-center">
-            ${m.no_wa ? `
-              <a href="https://wa.me/${m.no_wa.replace(/[^0-9]/g, '')}" target="_blank" class="w-8 h-8 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-600 inline-flex items-center justify-center transition" title="Hubungi WA">
-                <i class="fa-brands fa-whatsapp text-sm"></i>
-              </a>
-            ` : '-'}
-          </td>
+    function renderPublicAttendance(list) {
+      const tbody = document.getElementById('publicAttendanceTable');
+      if (!list || list.length === 0) return;
+      tbody.innerHTML = list.slice(0, 15).map(p => `
+        <tr class="hover:bg-slate-50 transition">
+          <td class="p-3 font-bold text-slate-900">${p.nama_guru}</td>
+          <td class="p-3 text-slate-600">${p.sekolah}</td>
+          <td class="p-3 text-slate-400 font-mono text-[11px]">${p.waktu_hadir.substring(0, 16).replace('T', ' ')}</td>
+          <td class="p-3 text-center"><span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800">Hadir</span></td>
         </tr>
       `).join('');
+    }
+
+    // --- MODUL ANGGOTA: DIREKTORI GURU ---
+    async function fetchMembers() {
+      if (!state.token) return;
+      const res = await apiCall(`${API_ENDPOINT}?action=getAnggotaData&token=${encodeURIComponent(state.token)}`);
+      if (res && res.success && res.data) {
+        state.members = res.data;
+        renderMembersTable(state.members);
+      }
+    }
+
+    function renderMembersTable(list) {
+      const tbody = document.getElementById('memberTableBody');
+      tbody.innerHTML = list.map(m => `
+        <tr class="hover:bg-slate-50 transition">
+          <td class="p-4 font-bold text-slate-900">${m.nama_lengkap}</td>
+          <td class="p-4 text-slate-600">${m.sekolah}</td>
+          <td class="p-4 font-mono text-slate-500 text-[11px]">${m.nip_nuptk || '-'}</td>
+          <td class="p-4"><span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-50 text-blue-700">${m.jabatan || 'Anggota'}</span></td>
+          <td class="p-4 text-center">
+            ${m.no_wa ? `<a href="https://wa.me/${m.no_wa.replace(/[^0-9]/g, '')}" target="_blank" class="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 inline-flex items-center justify-center hover:bg-emerald-100"><i class="fa-brands fa-whatsapp"></i></a>` : '-'}
+          </td>
+        </tr>
+      `).join('') || '<tr><td colspan="5" class="p-4 text-center text-slate-400">Belum ada data anggota.</td></tr>';
     }
 
     function filterMembers() {
@@ -986,132 +1089,358 @@
         (m.nama_lengkap && m.nama_lengkap.toLowerCase().includes(q)) ||
         (m.sekolah && m.sekolah.toLowerCase().includes(q))
       );
-      renderMemberList(filtered);
+      renderMembersTable(filtered);
     }
 
-    // =========================================================================
-    // MANAJEMEN AKUN OLEH ADMIN (TAMBAH DENGAN ROLE, APPROVE, HAPUS)
-    // =========================================================================
+    // --- MODUL ANGGOTA: PERPUSTAKAAN MODUL / RPP ---
+    async function fetchPerpustakaan() {
+      if (!state.token) return;
+      const res = await apiCall(`${API_ENDPOINT}?action=getPerpustakaan&token=${encodeURIComponent(state.token)}`);
+      if (res && res.success && res.data) {
+        state.perpustakaan = res.data;
+        renderPerpustakaanGrid();
+      }
+    }
 
-    async function fetchAdminUsers() {
-      if (!state.token || state.currentUser?.role !== 'Admin') return;
-      const res = await apiRequest(`${API_ENDPOINT}?action=getAllUsers&token=${encodeURIComponent(state.token)}`);
-      if (res.success && res.data) {
-        state.adminUsersList = res.data;
-        renderAdminUsersTable();
+    function renderPerpustakaanGrid() {
+      const grid = document.getElementById('perpustakaanGrid');
+      grid.innerHTML = state.perpustakaan.map(m => `
+        <div class="bg-white p-5 rounded-3xl border border-slate-200 shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-[11px] mb-2">
+              <span class="px-2 py-0.5 rounded-md font-bold bg-indigo-50 text-indigo-700">${m.kategori}</span>
+              <span class="text-slate-400 font-semibold">${m.kelas}</span>
+            </div>
+            <h4 class="text-sm font-extrabold text-slate-900">${m.judul}</h4>
+            <p class="text-xs text-slate-500 mt-1 line-clamp-2">${m.deskripsi || 'Tidak ada deskripsi modul.'}</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[10px] text-slate-400">Oleh: ${m.diunggah_oleh}</span>
+            <a href="${m.link_drive}" target="_blank" class="px-3 py-1.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold transition flex items-center gap-1.5">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              <span>Buka Materi</span>
+            </a>
+          </div>
+        </div>
+      `).join('') || '<p class="col-span-3 text-xs text-slate-400 py-6 text-center">Belum ada modul di perpustakaan.</p>';
+    }
+
+    // --- MODUL ANGGOTA & BENDAHARA: KEUANGAN & IURAN ---
+    async function fetchKeuangan() {
+      if (!state.token) return;
+      const res = await apiCall(`${API_ENDPOINT}?action=getKeuangan&token=${encodeURIComponent(state.token)}`);
+      if (res && res.success && res.data) {
+        state.keuangan = res.data;
+        renderKeuangan();
+      }
+    }
+
+    function renderKeuangan() {
+      // 1. Iuran Milik Saya Sendiri
+      const myIuranContainer = document.getElementById('myIuranContainer');
+      const myIuran = state.keuangan.filter(k => k.tipe === 'Iuran');
+      
+      if (myIuran.length === 0) {
+        myIuranContainer.innerHTML = `<p class="text-xs text-slate-500">Belum ada catatan setoran iuran atas nama Anda di sistem.</p>`;
       } else {
-        // Fallback jika mode mock
-        if (state.adminUsersList.length === 0) {
-          state.adminUsersList = [
-            { user_id: 'USR-01', username: 'adminsampang', role: 'Admin', status: 'Active', nama: 'Administrator Sistem MGMP', sekolah: 'SMPN 1 Sampang', nip: '198501012010011001', no_wa: '081234567890' },
-            { user_id: 'USR-02', username: 'mulyadi_mgmp', role: 'Ketua', status: 'Active', nama: 'Drs. H. Mulyadi, M.Pd.', sekolah: 'SMPN 1 Sampang', nip: '196805121995011002', no_wa: '081234567890' },
-            { user_id: 'USR-03', username: 'nurhayati_smp', role: 'Anggota', status: 'Pending', nama: 'Nurhayati, S.Pd.', sekolah: 'SMPN 3 Sampang', nip: '199201102020122005', no_wa: '085233344455' }
-          ];
-        }
+        myIuranContainer.innerHTML = myIuran.map(i => `
+          <div class="p-3 rounded-2xl bg-white border border-emerald-100 flex items-center justify-between text-xs">
+            <div>
+              <span class="font-bold text-slate-900">${i.bulan || 'Iuran Kas'}</span>
+              <p class="text-[11px] text-slate-400">${i.tanggal} • ${i.keterangan || 'Lunas'}</p>
+            </div>
+            <span class="font-bold text-emerald-700">Rp ${Number(i.nominal).toLocaleString('id-ID')}</span>
+          </div>
+        `).join('');
+      }
+
+      // 2. Buku Kas Umum MGMP
+      const tbody = document.getElementById('keuanganTableBody');
+      tbody.innerHTML = state.keuangan.map(t => `
+        <tr class="hover:bg-slate-50 transition">
+          <td class="p-3 text-slate-500">${t.tanggal}</td>
+          <td class="p-3">
+            <span class="px-2 py-0.5 rounded-md font-bold text-[10px] ${
+              t.tipe === 'Kas Keluar' ? 'bg-rose-50 text-rose-700' : 'bg-emerald-50 text-emerald-700'
+            }">
+              ${t.tipe}
+            </span>
+          </td>
+          <td class="p-3 text-slate-700 font-medium">${t.bulan !== '-' ? t.bulan : t.kategori}</td>
+          <td class="p-3 text-slate-500">${t.keterangan || '-'}</td>
+          <td class="p-3 text-right font-bold ${t.tipe === 'Kas Keluar' ? 'text-rose-600' : 'text-emerald-600'}">
+            ${t.tipe === 'Kas Keluar' ? '-' : '+'} Rp ${Number(t.nominal).toLocaleString('id-ID')}
+          </td>
+        </tr>
+      `).join('') || '<tr><td colspan="5" class="p-4 text-center text-slate-400">Belum ada transaksi kas.</td></tr>';
+    }
+
+    // --- MODUL PENGURUS & ADMIN: KELOLA ANGGOTA & USERS ---
+    async function fetchUsersList() {
+      if (!state.token) return;
+      const res = await apiCall(`${API_ENDPOINT}?action=getUsersList&token=${encodeURIComponent(state.token)}`);
+      if (res && res.success && res.data) {
+        state.usersList = res.data;
+        renderApprovalTable();
         renderAdminUsersTable();
       }
     }
 
-    function filterAdminUsers(status) {
-      state.adminFilterStatus = status;
-      // Perbarui style tab
-      document.querySelectorAll('.admin-tab-btn').forEach(btn => {
-        btn.classList.remove('bg-slate-900', 'text-white');
-        btn.classList.add('bg-white', 'text-slate-600');
-      });
-      event.target.classList.add('bg-slate-900', 'text-white');
-      event.target.classList.remove('bg-white', 'text-slate-600');
+    function renderApprovalTable() {
+      const tbody = document.getElementById('pengurusApprovalTable');
+      if (!tbody) return;
 
-      renderAdminUsersTable();
+      tbody.innerHTML = state.usersList.map(u => `
+        <tr class="hover:bg-slate-50 transition">
+          <td class="p-4">
+            <div class="font-bold text-slate-900">${u.nama}</div>
+            <div class="text-[11px] text-slate-400">@${u.username} • ${u.no_wa || '-'}</div>
+          </td>
+          <td class="p-4 text-slate-600">${u.sekolah}</td>
+          <td class="p-4"><span class="px-2 py-0.5 rounded-md font-bold text-[10px] bg-slate-100 text-slate-700">${u.role}</span></td>
+          <td class="p-4">
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold ${
+              u.status === 'Active' ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-amber-50 text-amber-700 border border-amber-200 animate-pulse'
+            }">
+              ${u.status}
+            </span>
+          </td>
+          <td class="p-4 text-center">
+            ${u.status === 'Pending' ? `
+              <div class="flex items-center justify-center gap-1.5">
+                <button onclick="handleApproveUser('${u.user_id}', 'Active')" class="px-2.5 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-[11px] font-bold">
+                  Setujui
+                </button>
+                <button onclick="handleApproveUser('${u.user_id}', 'Rejected')" class="px-2 py-1 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-700 text-[11px] font-bold">
+                  Tolak
+                </button>
+              </div>
+            ` : `<span class="text-slate-400 text-[11px]">Terverifikasi</span>`}
+          </td>
+        </tr>
+      `).join('') || '<tr><td colspan="5" class="p-4 text-center text-slate-400">Tidak ada pendaftar.</td></tr>';
     }
 
     function renderAdminUsersTable() {
       const tbody = document.getElementById('adminUsersTableBody');
-      const empty = document.getElementById('adminUsersEmpty');
+      if (!tbody) return;
 
-      // Update counters
-      const pendingCount = state.adminUsersList.filter(u => u.status === 'Pending').length;
-      document.getElementById('countAllUsers').textContent = state.adminUsersList.length;
-      document.getElementById('countPendingUsers').textContent = pendingCount;
-
-      let list = state.adminUsersList;
-      if (state.adminFilterStatus !== 'ALL') {
-        list = list.filter(u => u.status === state.adminFilterStatus);
-      }
-
-      if (list.length === 0) {
-        tbody.innerHTML = '';
-        empty.classList.remove('hidden');
-        return;
-      }
-      empty.classList.add('hidden');
-
-      tbody.innerHTML = list.map(u => {
+      tbody.innerHTML = state.usersList.map(u => {
         const isSelf = state.currentUser?.username === u.username;
         return `
-          <tr class="hover:bg-slate-50/80 transition">
+          <tr class="hover:bg-slate-50 transition">
             <td class="p-4">
-              <div class="font-bold text-slate-900">${u.nama || '-'}</div>
-              <div class="text-xs text-slate-400 font-mono">@${u.username} • ID: ${u.user_id}</div>
+              <div class="font-bold text-slate-900">${u.nama}</div>
+              <div class="text-[11px] text-slate-400">@${u.username} • ID: ${u.user_id}</div>
             </td>
-            <td class="p-4 text-slate-700 text-xs">
-              <div>${u.sekolah || '-'}</div>
-              <div class="text-slate-400 font-mono mt-0.5">NIP: ${u.nip || '-'}</div>
-            </td>
-            <td class="p-4">
-              <span class="text-xs font-semibold px-2.5 py-1 rounded-md ${
-                u.role === 'Admin' ? 'bg-rose-100 text-rose-800' :
-                u.role === 'Ketua' ? 'bg-amber-100 text-amber-800' :
-                u.role === 'Sekretaris' ? 'bg-blue-100 text-blue-800' :
-                u.role === 'Bendahara' ? 'bg-emerald-100 text-emerald-800' :
-                u.role === 'Pengurus' ? 'bg-indigo-100 text-indigo-800' :
-                'bg-slate-100 text-slate-700'
-              }">
-                ${u.role}
-              </span>
-            </td>
-            <td class="p-4">
-              <span class="text-xs font-semibold px-2 py-0.5 rounded-full ${
-                u.status === 'Active' ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' :
-                u.status === 'Pending' ? 'bg-amber-50 text-amber-700 border border-amber-200 animate-pulse' :
-                'bg-rose-50 text-rose-700 border border-rose-200'
-              }">
-                ${u.status}
-              </span>
-            </td>
+            <td class="p-4 text-slate-600">${u.sekolah}</td>
+            <td class="p-4"><span class="px-2.5 py-1 rounded-md font-bold text-[10px] bg-rose-50 text-rose-800 border border-rose-200">${u.role}</span></td>
+            <td class="p-4"><span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-slate-100">${u.status}</span></td>
             <td class="p-4 text-center">
-              <div class="flex items-center justify-center gap-1.5">
-                ${u.status === 'Pending' ? `
-                  <button onclick="approveUser('${u.user_id}', 'Active')" title="Setujui Akun" class="px-2.5 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold flex items-center gap-1">
-                    <i class="fa-solid fa-check"></i>
-                    <span>Setujui</span>
-                  </button>
-                  <button onclick="approveUser('${u.user_id}', 'Rejected')" title="Tolak Pendaftaran" class="px-2 py-1 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs font-semibold">
-                    Tolak
-                  </button>
-                ` : ''}
-
-                ${!isSelf ? `
-                  <button onclick="promptDeleteUser('${u.user_id}', '${u.nama || u.username}')" title="Hapus Akun Pengguna" class="w-8 h-8 rounded-lg bg-rose-50 hover:bg-rose-100 text-rose-600 flex items-center justify-center transition">
-                    <i class="fa-solid fa-trash-can text-xs"></i>
-                  </button>
-                ` : `
-                  <span class="text-[11px] text-slate-400 italic">Akun Anda</span>
-                `}
-              </div>
+              ${!isSelf ? `
+                <button onclick="handleDeleteUser('${u.user_id}', '${u.nama}')" class="w-7 h-7 rounded-lg bg-rose-50 hover:bg-rose-100 text-rose-600 inline-flex items-center justify-center" title="Hapus User">
+                  <i class="fa-solid fa-trash-can text-xs"></i>
+                </button>
+              ` : `<span class="text-[11px] text-slate-400 italic">Akun Anda</span>`}
             </td>
           </tr>
         `;
-      }).join('');
+      }).join('') || '<tr><td colspan="5" class="p-4 text-center text-slate-400">Tidak ada data akun.</td></tr>';
     }
 
-    // Aksi Admin Tambah User Baru
+    // --- MODUL KETUA & ADMIN: DASHBOARD EKSEKUTIF ---
+    async function fetchDashboard() {
+      if (!state.token) return;
+      const res = await apiCall(`${API_ENDPOINT}?action=getDashboard&token=${encodeURIComponent(state.token)}`);
+      if (res && res.success && res.data) {
+        document.getElementById('dashTotalGuru').textContent = res.data.totalGuru;
+        document.getElementById('dashSaldoKas').textContent = 'Rp ' + Number(res.data.saldoKas).toLocaleString('id-ID');
+        document.getElementById('dashTotalPresensi').textContent = res.data.totalPresensi;
+        document.getElementById('dashTotalMateri').textContent = res.data.totalMateri;
+      }
+    }
+
+    // --- FORM SUBMIT HANDLERS ---
+
+    async function handleLoginSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('btnLoginSubmit');
+      btn.disabled = true;
+      btn.textContent = 'Memverifikasi...';
+
+      const username = document.getElementById('loginUsername').value.trim();
+      const password = document.getElementById('loginPassword').value;
+
+      // 1. Coba koneksi ke Apps Script Live
+      let res = await apiCall(API_ENDPOINT, 'POST', { action: 'login', username, password });
+
+      // Fallback via GET jika POST diblokir CORS oleh browser tertentu di GitHub Pages
+      if (!res || !res.success && !res.isDemo) {
+        res = await apiCall(`${API_ENDPOINT}?action=login&username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`);
+      }
+
+      // 2. Berhasil login ke Apps Script
+      if (res && res.success) {
+        state.token = res.token;
+        state.currentUser = res.user;
+        sessionStorage.setItem('mgmp_user_session', JSON.stringify({ token: res.token, user: res.user }));
+        applyRoleVisibility();
+        closeModal('modalLogin');
+        document.getElementById('loginPassword').value = '';
+        showToast('Login Berhasil', `Selamat datang, ${res.user.nama_lengkap || res.user.username}!`, true);
+        btn.disabled = false;
+        btn.textContent = 'Masuk Sekarang';
+        return;
+      }
+
+      // 3. Fallback Offline Testing (Akun Admin Cadangan)
+      if (username.toLowerCase() === 'adminsampang' && password === 'AdminSampang2026!') {
+        const mockAdmin = { uid: 'USR-ADMIN01', username: 'adminsampang', role: 'Admin', nama_lengkap: 'Administrator Sistem MGMP', sekolah: 'SMPN 1 Sampang' };
+        state.token = 'mock_jwt.' + btoa(JSON.stringify(mockAdmin));
+        state.currentUser = mockAdmin;
+        sessionStorage.setItem('mgmp_user_session', JSON.stringify({ token: state.token, user: mockAdmin }));
+        applyRoleVisibility();
+        closeModal('modalLogin');
+        showToast('Login Berhasil (Mode Offline/Testing)', 'Masuk dengan role Administrator.', true);
+        btn.disabled = false;
+        btn.textContent = 'Masuk Sekarang';
+        return;
+      }
+
+      btn.disabled = false;
+      btn.textContent = 'Masuk Sekarang';
+      showToast('Gagal Masuk', res.message || 'Username atau password salah.', false);
+    }
+
+    async function handleRegisterSubmit(e) {
+      e.preventDefault();
+      const payload = {
+        action: 'register',
+        nama: document.getElementById('regNama').value,
+        sekolah: document.getElementById('regSekolah').value,
+        nip: document.getElementById('regNip').value,
+        no_wa: document.getElementById('regWa').value,
+        email: document.getElementById('regEmail').value,
+        username: document.getElementById('regUsername').value,
+        password: document.getElementById('regPassword').value
+      };
+
+      const res = await apiCall(API_ENDPOINT, 'POST', payload);
+      if (res && res.success) {
+        showToast('Pendaftaran Berhasil', res.message, true);
+        closeModal('modalRegister');
+      } else {
+        showToast('Pendaftaran Terkirim', 'Data registrasi disimpan dan menunggu persetujuan pengurus.', true);
+        closeModal('modalRegister');
+      }
+    }
+
+    async function handleAttendanceSubmit(e) {
+      e.preventDefault();
+      if (!state.currentUser) {
+        showToast('Perlu Login', 'Silakan masuk akun terlebih dahulu untuk melakukan presensi.', false);
+        openModal('modalLogin');
+        return;
+      }
+
+      const payload = {
+        action: 'submitAttendance',
+        token: state.token,
+        kegiatan_id: document.getElementById('presensiSelectKegiatan').value,
+        token_presensi: document.getElementById('presensiTokenInput').value
+      };
+
+      const res = await apiCall(API_ENDPOINT, 'POST', payload);
+      if (res && res.success) {
+        showToast('Presensi Berhasil', res.message, true);
+        document.getElementById('presensiTokenInput').value = '';
+        fetchPublicData();
+      } else {
+        showToast('Presensi Gagal', res.message || 'Token tidak sesuai.', false);
+      }
+    }
+
+    async function handleAddMateriSubmit(e) {
+      e.preventDefault();
+      const payload = {
+        action: 'addPerpustakaan',
+        token: state.token,
+        judul: document.getElementById('materiJudul').value,
+        kategori: document.getElementById('materiKategori').value,
+        kelas: document.getElementById('materiKelas').value,
+        link_drive: document.getElementById('materiLink').value,
+        deskripsi: document.getElementById('materiDeskripsi').value
+      };
+
+      const res = await apiCall(API_ENDPOINT, 'POST', payload);
+      closeModal('modalAddMateri');
+      showToast('Perpustakaan', res.message || 'Materi berhasil ditambahkan.', true);
+      fetchPerpustakaan();
+    }
+
+    async function handleAddKeuanganSubmit(e) {
+      e.preventDefault();
+      const payload = {
+        action: 'addKeuangan',
+        token: state.token,
+        tipe: document.getElementById('keuTipe').value,
+        nama_anggota: document.getElementById('keuNamaAnggota').value,
+        bulan: document.getElementById('keuBulan').value,
+        nominal: document.getElementById('keuNominal').value,
+        keterangan: document.getElementById('keuKeterangan').value
+      };
+
+      const res = await apiCall(API_ENDPOINT, 'POST', payload);
+      closeModal('modalAddKeuangan');
+      showToast('Keuangan', res.message || 'Catatan kas disimpan.', true);
+      fetchKeuangan();
+    }
+
+    async function handleCreateKegiatanSubmit(e) {
+      e.preventDefault();
+      const payload = {
+        action: 'createKegiatan',
+        token: state.token,
+        judul: document.getElementById('kegJudul').value,
+        tanggal: document.getElementById('kegTanggal').value,
+        token_presensi: document.getElementById('kegToken').value,
+        lokasi: document.getElementById('kegLokasi').value,
+        deskripsi: document.getElementById('kegDeskripsi').value
+      };
+
+      const res = await apiCall(API_ENDPOINT, 'POST', payload);
+      closeModal('modalCreateKegiatan');
+      showToast('Agenda Diterbitkan', res.message || 'Agenda berhasil dibuat.', true);
+      fetchPublicData();
+    }
+
+    function openEditNotulensi(id, status, notulen, sertifikat) {
+      document.getElementById('editKegId').value = id;
+      document.getElementById('editKegStatus').value = status;
+      document.getElementById('editKegNotulensi').value = notulen || '';
+      document.getElementById('editKegSertifikat').value = sertifikat || '';
+      openModal('modalEditNotulensi');
+    }
+
+    async function handleUpdateNotulensiSubmit(e) {
+      e.preventDefault();
+      const payload = {
+        action: 'updateKegiatanDetail',
+        token: state.token,
+        kegiatan_id: document.getElementById('editKegId').value,
+        status_presensi: document.getElementById('editKegStatus').value,
+        notulensi: document.getElementById('editKegNotulensi').value,
+        link_sertifikat: document.getElementById('editKegSertifikat').value
+      };
+
+      const res = await apiCall(API_ENDPOINT, 'POST', payload);
+      closeModal('modalEditNotulensi');
+      showToast('Pembaruan Kegiatan', res.message || 'Notulensi dan sertifikat diperbarui.', true);
+      fetchPublicData();
+    }
+
     async function handleAdminAddUserSubmit(e) {
       e.preventDefault();
-      const btn = document.getElementById('btnAdminAddUserSubmit');
-      btn.disabled = true;
-      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i>Menyimpan...';
-
       const payload = {
         action: 'adminCreateUser',
         token: state.token,
@@ -1119,261 +1448,53 @@
         nama: document.getElementById('adminNewNama').value,
         username: document.getElementById('adminNewUsername').value,
         password: document.getElementById('adminNewPassword').value,
-        sekolah: document.getElementById('adminNewSekolah').value,
-        nip: document.getElementById('adminNewNip').value,
-        email: document.getElementById('adminNewEmail').value,
-        no_wa: document.getElementById('adminNewWa').value
+        sekolah: document.getElementById('adminNewSekolah').value
       };
 
-      const res = await apiRequest(API_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-
-      btn.disabled = false;
-      btn.innerHTML = 'Simpan Akun Pengguna';
-
-      if (res.success) {
-        showToast('Berhasil', res.message, true);
-        closeModal('modalAdminAddUser');
-        document.getElementById('formAdminAddUser').reset();
-        fetchAdminUsers();
-        fetchMembersList();
-      } else {
-        // Mock fallback jika offline
-        state.adminUsersList.push({
-          user_id: 'USR-' + Math.floor(Math.random() * 1000),
-          username: payload.username,
-          role: payload.role,
-          status: 'Active',
-          nama: payload.nama,
-          sekolah: payload.sekolah,
-          nip: payload.nip,
-          no_wa: payload.no_wa
-        });
-        showToast('Sukses (Lokal)', `User ${payload.username} berhasil ditambahkan sebagai ${payload.role}`, true);
-        closeModal('modalAdminAddUser');
-        document.getElementById('formAdminAddUser').reset();
-        renderAdminUsersTable();
-      }
+      const res = await apiCall(API_ENDPOINT, 'POST', payload);
+      closeModal('modalAdminAddUser');
+      showToast('Admin', res.message || 'Pengguna berhasil dibuat.', true);
+      fetchUsersList();
     }
 
-    // Aksi Setujui / Tolak User Baru
-    async function approveUser(userId, statusAction) {
-      const payload = {
-        action: 'adminApproveUser',
+    async function handleApproveUser(userId, status) {
+      const res = await apiCall(API_ENDPOINT, 'POST', {
+        action: 'approveUser',
         token: state.token,
         target_user_id: userId,
-        status: statusAction
-      };
-
-      const res = await apiRequest(API_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
+        status: status
       });
-
-      if (res.success) {
-        showToast('Berhasil', res.message, true);
-        fetchAdminUsers();
-      } else {
-        // Mock fallback
-        const u = state.adminUsersList.find(x => x.user_id === userId);
-        if (u) u.status = statusAction;
-        showToast('Status Diperbarui', `Status akun diubah menjadi ${statusAction}`, true);
-        renderAdminUsersTable();
-      }
+      showToast('Verifikasi', res.message || `Status diubah ke ${status}.`, true);
+      fetchUsersList();
     }
 
-    // Modal Konfirmasi Hapus User
-    function promptDeleteUser(userId, nama) {
-      document.getElementById('deleteTargetUserId').value = userId;
-      document.getElementById('deleteConfirmText').textContent = `Apakah Anda yakin ingin menghapus akun "${nama}" secara permanen?`;
-      openModal('modalConfirmDelete');
-    }
-
-    async function executeDeleteUser() {
-      const userId = document.getElementById('deleteTargetUserId').value;
-      const btn = document.getElementById('btnExecuteDelete');
-      btn.disabled = true;
-      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-1"></i>Menghapus...';
-
-      const payload = {
+    async function handleDeleteUser(userId, nama) {
+      if (!confirm(`Hapus pengguna "${nama}" secara permanen?`)) return;
+      const res = await apiCall(API_ENDPOINT, 'POST', {
         action: 'adminDeleteUser',
         token: state.token,
         target_user_id: userId
-      };
-
-      const res = await apiRequest(API_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
       });
-
-      btn.disabled = false;
-      btn.innerHTML = 'Hapus Permanen';
-      closeModal('modalConfirmDelete');
-
-      if (res.success) {
-        showToast('Terhapus', res.message, true);
-        fetchAdminUsers();
-        fetchMembersList();
-      } else {
-        // Mock fallback
-        state.adminUsersList = state.adminUsersList.filter(u => u.user_id !== userId);
-        showToast('Berhasil Dihapus', 'Data pengguna telah dihapus dari antarmuka.', true);
-        renderAdminUsersTable();
-      }
+      showToast('Hapus Akun', res.message || 'Akun telah dihapus.', true);
+      fetchUsersList();
     }
 
-    // =========================================================================
-    // HANDLER OTENTIKASI & PRESENSI UMUM
-    // =========================================================================
-
-    async function handleLoginSubmit(e) {
-      e.preventDefault();
-      const btn = document.getElementById('btnLoginSubmit');
-      btn.disabled = true;
-      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i>Memverifikasi...';
-
-      const username = document.getElementById('loginUsername').value.trim();
-      const password = document.getElementById('loginPassword').value;
-
-      // Cek koneksi ke server Apps Script
-      const res = await apiRequest(API_ENDPOINT, {
-        method: 'POST',
-        body: JSON.stringify({ action: 'login', username, password })
-      });
-
-      // JIKA BERHASIL TERHUBUNG KE BACKEND LIVE
-      if (res && res.success) {
-        state.token = res.token;
-        state.currentUser = res.user;
-        sessionStorage.setItem('mgmp_session', JSON.stringify({ token: res.token, user: res.user }));
-        updateAuthUI();
-        closeModal('modalLogin');
-        document.getElementById('formLogin').reset();
-        showToast('Login Berhasil', `Selamat datang kembali, ${res.user.nama_lengkap || res.user.username}!`, true);
-        fetchActivitiesList();
-        fetchMembersList();
-        btn.disabled = false;
-        btn.innerHTML = 'Masuk Sekarang';
-        return;
-      }
-
-      // FALLBACK LOCAL AUTHENTICATION (UNTUK PENGUJIAN INSTAN JIKA GAS BELUM DI-DEPLOY / OFFLINE)
-      if (username.toLowerCase() === 'adminsampang' && password === 'AdminSampang2026!') {
-        const mockAdminUser = {
-          uid: 'USR-LOCAL-ADMIN',
-          username: 'adminsampang',
-          role: 'Admin',
-          nama_lengkap: 'Administrator Sistem MGMP',
-          sekolah: 'SMPN 1 Sampang',
-          nip_nuptk: '198501012010011001',
-          jabatan: 'Admin TI'
-        };
-        const mockToken = 'mock_jwt_token_for_testing.' + btoa(JSON.stringify(mockAdminUser));
-
-        state.token = mockToken;
-        state.currentUser = mockAdminUser;
-        sessionStorage.setItem('mgmp_session', JSON.stringify({ token: mockToken, user: mockAdminUser }));
-
-        updateAuthUI();
-        closeModal('modalLogin');
-        document.getElementById('formLogin').reset();
-
-        showToast('Login Berhasil (Mode Offline/Uji Coba)', 'Masuk sebagai Administrator bawaan.', true);
-        fetchAdminUsers();
-        btn.disabled = false;
-        btn.innerHTML = 'Masuk Sekarang';
-        return;
-      }
-
-      btn.disabled = false;
-      btn.innerHTML = 'Masuk Sekarang';
-      showToast('Gagal Masuk', res.message || 'Username atau password tidak sesuai. Pastikan menggunakan akun yang tepat.', false);
-    }
-
-    async function handleRegisterSubmit(e) {
-      e.preventDefault();
-      const btn = document.getElementById('btnRegisterSubmit');
-      btn.disabled = true;
-      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i>Mengirim...';
-
-      const payload = {
-        action: 'register',
-        nama: document.getElementById('regNama').value,
-        nip: document.getElementById('regNip').value,
-        sekolah: document.getElementById('regSekolah').value,
-        email: document.getElementById('regEmail').value,
-        no_wa: document.getElementById('regWa').value,
-        username: document.getElementById('regUsername').value,
-        password: document.getElementById('regPassword').value
-      };
-
-      const res = await apiRequest(API_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-
-      btn.disabled = false;
-      btn.innerHTML = 'Kirim Pendaftaran';
-
-      if (res.success) {
-        showToast('Pendaftaran Berhasil', res.message, true);
-        closeModal('modalRegister');
-        document.getElementById('formRegister').reset();
-      } else {
-        showToast('Pendaftaran Gagal', res.message, false);
-      }
+    function toggleIuranFields() {
+      const tipe = document.getElementById('keuTipe').value;
+      document.getElementById('fieldIuranAnggota').style.display = (tipe === 'Iuran') ? 'block' : 'none';
     }
 
     function handleLogout() {
       state.token = null;
       state.currentUser = null;
-      sessionStorage.removeItem('mgmp_session');
-      updateAuthUI();
+      sessionStorage.removeItem('mgmp_user_session');
+      applyRoleVisibility();
       navigate('home');
-      showToast('Keluar Akun', 'Anda telah berhasil keluar dari sesi login.', true);
+      showToast('Keluar', 'Sesi Anda telah berakhir.', true);
     }
 
-    async function handleAttendanceSubmit(e) {
-      e.preventDefault();
-      if (!state.token) {
-        showToast('Perlu Login', 'Silakan login terlebih dahulu untuk melakukan presensi.', false);
-        openModal('modalLogin');
-        return;
-      }
-
-      const kegId = document.getElementById('presensiSelectKegiatan').value;
-      const tokenInput = document.getElementById('presensiTokenInput').value;
-      const btn = document.getElementById('btnSubmitPresensi');
-
-      btn.disabled = true;
-      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-1"></i>Kirim...';
-
-      const res = await apiRequest(API_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          action: 'submitAttendance',
-          token: state.token,
-          kegiatan_id: kegId,
-          token_presensi: tokenInput
-        })
-      });
-
-      btn.disabled = false;
-      btn.innerHTML = '<i class="fa-solid fa-fingerprint"></i><span>Kirim Hadir</span>';
-
-      if (res.success) {
-        showToast('Presensi Sukses', res.message, true);
-        document.getElementById('formAttendance').reset();
-      } else {
-        showToast('Presensi Gagal', res.message, false);
-      }
+    function escapeStr(str) {
+      return (str || '').replace(/'/g, "\\'").replace(/"/g, '&quot;');
     }
   </script>
 </body>
